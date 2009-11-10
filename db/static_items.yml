@@ -1,0 +1,235 @@
+--- 
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: P&O
+    created_at: 2009-10-28 05:56:28
+    list_name: BusinessUnit
+    updated_at: 2009-10-28 05:56:28
+    id: "1"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: RBB
+    created_at: 2009-10-28 05:56:39
+    list_name: BusinessUnit
+    updated_at: 2009-10-28 05:56:39
+    id: "2"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: WIB
+    created_at: 2009-10-28 05:58:00
+    list_name: BusinessUnit
+    updated_at: 2009-10-28 05:58:00
+    id: "3"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: CORP
+    created_at: 2009-10-28 05:58:14
+    list_name: BusinessUnit
+    updated_at: 2009-10-28 05:58:14
+    id: "4"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: TECH
+    created_at: 2009-10-28 05:58:21
+    list_name: BusinessUnit
+    updated_at: 2009-10-28 05:58:21
+    id: "5"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: BT
+    created_at: 2009-10-28 05:58:41
+    list_name: BusinessUnit
+    updated_at: 2009-10-28 05:58:41
+    id: "6"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: SIP
+    created_at: 2009-10-28 05:59:18
+    list_name: BusinessUnit
+    updated_at: 2009-10-28 05:59:18
+    id: "7"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: Other
+    created_at: 2009-10-28 05:59:34
+    list_name: BusinessUnit
+    updated_at: 2009-10-28 05:59:34
+    id: "8"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: NSW
+    created_at: 2009-10-28 06:11:46
+    list_name: State
+    updated_at: 2009-10-28 06:11:46
+    id: "9"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: QLD
+    created_at: 2009-10-28 06:11:57
+    list_name: State
+    updated_at: 2009-10-28 06:11:57
+    id: "10"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: SA
+    created_at: 2009-10-28 06:12:05
+    list_name: State
+    updated_at: 2009-10-28 06:12:05
+    id: "11"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: TAS
+    created_at: 2009-10-28 06:12:14
+    list_name: State
+    updated_at: 2009-10-28 06:12:14
+    id: "12"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: VIC
+    created_at: 2009-10-28 06:12:22
+    list_name: State
+    updated_at: 2009-10-28 06:12:22
+    id: "13"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: WA
+    created_at: 2009-10-28 06:12:33
+    list_name: State
+    updated_at: 2009-10-28 06:12:33
+    id: "14"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: NT
+    created_at: 2009-10-28 06:13:32
+    list_name: State
+    updated_at: 2009-10-28 06:13:32
+    id: "15"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: ACT
+    created_at: 2009-10-28 06:13:40
+    list_name: State
+    updated_at: 2009-10-28 06:13:40
+    id: "16"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: MOVE
+    created_at: 2009-10-28 06:18:54
+    list_name: MoveType
+    updated_at: 2009-10-28 06:18:54
+    id: "17"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: SIZE
+    created_at: 2009-10-28 06:19:02
+    list_name: MoveType
+    updated_at: 2009-10-28 06:19:02
+    id: "18"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: WRKS
+    created_at: 2009-10-28 06:19:12
+    list_name: MoveType
+    updated_at: 2009-10-28 06:19:12
+    id: "19"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: Opportunity
+    created_at: 2009-10-28 06:22:33
+    list_name: OpportunityStatus
+    updated_at: 2009-10-28 06:22:33
+    id: "20"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: Qualified
+    created_at: 2009-10-28 06:22:42
+    list_name: OpportunityStatus
+    updated_at: 2009-10-28 06:22:42
+    id: "21"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: Planning
+    created_at: 2009-10-28 06:23:01
+    list_name: OpportunityStatus
+    updated_at: 2009-10-28 06:23:01
+    id: "22"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: Agreed
+    created_at: 2009-10-28 06:23:11
+    list_name: OpportunityStatus
+    updated_at: 2009-10-28 06:23:11
+    id: "23"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: Delivered
+    created_at: 2009-10-28 06:23:18
+    list_name: OpportunityStatus
+    updated_at: 2009-10-28 06:23:18
+    id: "24"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: CBD
+    created_at: 2009-10-28 07:13:22
+    list_name: BuildingZone
+    updated_at: 2009-10-28 07:13:27
+    id: "25"
+  attributes_cache: {}
+
+- !ruby/object:StaticItem 
+  attributes: 
+    list_item: Metro
+    created_at: 2009-10-28 07:13:35
+    list_name: BuildingZone
+    updated_at: 2009-10-28 07:13:35
+    id: "26"
+  attributes_cache: {}
+

@@ -1,0 +1,45 @@
+(in /Users/geth/development/rails/pipeline)
+                   static_items GET    /static_items(.:format)                                                   {:controller=>"static_items", :action=>"index"}
+                                POST   /static_items(.:format)                                                   {:controller=>"static_items", :action=>"create"}
+                new_static_item GET    /static_items/new(.:format)                                               {:controller=>"static_items", :action=>"new"}
+               edit_static_item GET    /static_items/:id/edit(.:format)                                          {:controller=>"static_items", :action=>"edit"}
+                    static_item GET    /static_items/:id(.:format)                                               {:controller=>"static_items", :action=>"show"}
+                                PUT    /static_items/:id(.:format)                                               {:controller=>"static_items", :action=>"update"}
+                                DELETE /static_items/:id(.:format)                                               {:controller=>"static_items", :action=>"destroy"}
+                         floors GET    /floors(.:format)                                                         {:controller=>"floors", :action=>"index"}
+                                POST   /floors(.:format)                                                         {:controller=>"floors", :action=>"create"}
+                      new_floor GET    /floors/new(.:format)                                                     {:controller=>"floors", :action=>"new"}
+                     edit_floor GET    /floors/:id/edit(.:format)                                                {:controller=>"floors", :action=>"edit"}
+                          floor GET    /floors/:id(.:format)                                                     {:controller=>"floors", :action=>"show"}
+                                PUT    /floors/:id(.:format)                                                     {:controller=>"floors", :action=>"update"}
+                                DELETE /floors/:id(.:format)                                                     {:controller=>"floors", :action=>"destroy"}
+                  opportunities GET    /opportunities(.:format)                                                  {:controller=>"opportunities", :action=>"index"}
+                                POST   /opportunities(.:format)                                                  {:controller=>"opportunities", :action=>"create"}
+                new_opportunity GET    /opportunities/new(.:format)                                              {:controller=>"opportunities", :action=>"new"}
+               edit_opportunity GET    /opportunities/:id/edit(.:format)                                         {:controller=>"opportunities", :action=>"edit"}
+                    opportunity GET    /opportunities/:id(.:format)                                              {:controller=>"opportunities", :action=>"show"}
+                                PUT    /opportunities/:id(.:format)                                              {:controller=>"opportunities", :action=>"update"}
+                                DELETE /opportunities/:id(.:format)                                              {:controller=>"opportunities", :action=>"destroy"}
+   building_floor_opportunities GET    /buildings/:building_id/floors/:floor_id/opportunities(.:format)          {:controller=>"opportunities", :action=>"index"}
+                                POST   /buildings/:building_id/floors/:floor_id/opportunities(.:format)          {:controller=>"opportunities", :action=>"create"}
+ new_building_floor_opportunity GET    /buildings/:building_id/floors/:floor_id/opportunities/new(.:format)      {:controller=>"opportunities", :action=>"new"}
+edit_building_floor_opportunity GET    /buildings/:building_id/floors/:floor_id/opportunities/:id/edit(.:format) {:controller=>"opportunities", :action=>"edit"}
+     building_floor_opportunity GET    /buildings/:building_id/floors/:floor_id/opportunities/:id(.:format)      {:controller=>"opportunities", :action=>"show"}
+                                PUT    /buildings/:building_id/floors/:floor_id/opportunities/:id(.:format)      {:controller=>"opportunities", :action=>"update"}
+                                DELETE /buildings/:building_id/floors/:floor_id/opportunities/:id(.:format)      {:controller=>"opportunities", :action=>"destroy"}
+                building_floors GET    /buildings/:building_id/floors(.:format)                                  {:controller=>"floors", :action=>"index"}
+                                POST   /buildings/:building_id/floors(.:format)                                  {:controller=>"floors", :action=>"create"}
+             new_building_floor GET    /buildings/:building_id/floors/new(.:format)                              {:controller=>"floors", :action=>"new"}
+            edit_building_floor GET    /buildings/:building_id/floors/:id/edit(.:format)                         {:controller=>"floors", :action=>"edit"}
+                 building_floor GET    /buildings/:building_id/floors/:id(.:format)                              {:controller=>"floors", :action=>"show"}
+                                PUT    /buildings/:building_id/floors/:id(.:format)                              {:controller=>"floors", :action=>"update"}
+                                DELETE /buildings/:building_id/floors/:id(.:format)                              {:controller=>"floors", :action=>"destroy"}
+                      buildings GET    /buildings(.:format)                                                      {:controller=>"buildings", :action=>"index"}
+                                POST   /buildings(.:format)                                                      {:controller=>"buildings", :action=>"create"}
+                   new_building GET    /buildings/new(.:format)                                                  {:controller=>"buildings", :action=>"new"}
+                  edit_building GET    /buildings/:id/edit(.:format)                                             {:controller=>"buildings", :action=>"edit"}
+                       building GET    /buildings/:id(.:format)                                                  {:controller=>"buildings", :action=>"show"}
+                                PUT    /buildings/:id(.:format)                                                  {:controller=>"buildings", :action=>"update"}
+                                DELETE /buildings/:id(.:format)                                                  {:controller=>"buildings", :action=>"destroy"}
+                                       /:controller/:action/:id                                                  
+                                       /:controller/:action/:id(.:format)                                        

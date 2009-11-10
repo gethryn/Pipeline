@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<chart>
+	<series>
+		<value color="#3399FF" xid="4">182G</value>
+		<value color="#3399FF" xid="3">255E</value>
+		<value color="#3399FF" xid="1">275K</value>
+		<value color="#3399FF" xid="10">2CT</value>
+		<value color="#3399FF" xid="15">316G</value>
+		<value color="#3399FF" xid="8">33P</value>
+		<value color="#3399FF" xid="9">35P</value>
+		<value color="#3399FF" xid="12">55M</value>
+		<value color="#3399FF" xid="2">60MP</value>
+		<value color="#66CC00" xid="11">32MG</value>
+		<value color="#66CC00" xid="13">75G</value>
+		<value color="#66CC00" xid="14">80G</value>
+		<value color="#66CC00" xid="6">CON</value>
+		<value color="#66CC00" xid="5">EPP</value>
+		<value color="#66CC00" xid="7">KOG</value>
+	</series>
+	<graphs>
+		<graph title="Capacity" gid="1">
+			<value color="#3399FF" xid="4">0</value>
+			<value color="#3399FF" xid="3">303</value>
+			<value color="#3399FF" xid="1">6036</value>
+			<value color="#3399FF" xid="10">177</value>
+			<value color="#3399FF" xid="15">0</value>
+			<value color="#3399FF" xid="8">0</value>
+			<value color="#3399FF" xid="9">0</value>
+			<value color="#3399FF" xid="12">0</value>
+			<value color="#3399FF" xid="2">233</value>
+			<value color="#66CC00" xid="11">0</value>
+			<value color="#66CC00" xid="13">0</value>
+			<value color="#66CC00" xid="14">0</value>
+			<value color="#66CC00" xid="6">1313</value>
+			<value color="#66CC00" xid="5">656</value>
+			<value color="#66CC00" xid="7">0</value>
+		</graph>
+	</graphs>
+</chart>

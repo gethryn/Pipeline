@@ -1,0 +1,36 @@
+--- 
+floor_00003: 
+  created_at: 2009-10-28 07:28:17 Z
+  updated_at: 2009-10-28 07:28:17 Z
+  id: 3
+  building_id: 1
+  floor_level: L01
+  active: true
+floor_00004: 
+  created_at: 2009-10-28 07:28:27 Z
+  updated_at: 2009-10-28 07:28:27 Z
+  id: 4
+  building_id: 2
+  floor_level: G
+  active: true
+floor_00005: 
+  created_at: 2009-10-28 07:28:35 Z
+  updated_at: 2009-10-28 07:28:35 Z
+  id: 5
+  building_id: 2
+  floor_level: L01
+  active: true
+floor_00001: 
+  created_at: 2009-10-28 07:27:14 Z
+  updated_at: 2009-10-28 07:27:14 Z
+  id: 1
+  building_id: 1
+  floor_level: B1
+  active: true
+floor_00002: 
+  created_at: 2009-10-28 07:28:10 Z
+  updated_at: 2009-10-28 07:28:10 Z
+  id: 2
+  building_id: 1
+  floor_level: G
+  active: true

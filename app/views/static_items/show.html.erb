@@ -1,0 +1,20 @@
+<p>
+  <b>List name:</b>
+  <%=h @static_item.list_name %>
+</p>
+<p>
+  <b>List key:</b>
+  <%=h @static_item.list_key %>
+</p>
+<p>
+  <b>List item:</b>
+  <%=h @static_item.list_item %>
+</p>
+<p>
+  <b>List img:</b>
+  <%=h @static_item.list_img %>
+</p>
+
+
+<%= link_to 'Edit', edit_static_item_path(@static_item) %> |
+<%= link_to 'Back', static_items_path %>

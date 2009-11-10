@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : EarthlingTwo  
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20090918
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>propertunities: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'style' %>
+	<%= javascript_include_tag :all %> <!-- For example -->
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1>propertunities</h1>
+			<p>by gethdev</p>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li><a href="/index.html">Home</a></li>
+			<li class="current_page_item"><%= link_to 'Buildings', buildings_path %></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+			<div id="contentwide">
+				<p style="color: green"><%= flash[:notice] %></p>
+						<%= yield %>
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+			<!-- end #content -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer-content">
+	<div class="column1">
+		<h2>What is this propertunities thing, anyway?</h2>
+		<p><strong>Details to follow soon</strong> eu velit laoreet tempor accumsan vitae nibh. Aenean commodo, tortor eu porta convolutpat elementum. Proin fermentum molestie erat eget vehicula. Aenean eget tellus mi. Fusce scelerisque odio quis ante bibendum sollicitudin. Suspendisse potenti. Vivamus quam odio, facilisis at ultrices nec, sollicitudin ac risus. Donec ut odio ipsum, sed tincidunt... <a href="#">Learn more&#8230;</a></p>
+	</div>
+	<div class="column2">
+		<ul class="list">
+			<li><a href="mailto:gethrynghavalas@westpac.com.au?subject=New+Feature">Submit a feauture request</a></li>
+			<li><a href="mailto:gethrynghavalas@westpac.com.au?subject=Request+Access">Request access to propertunities...</a></li>
+			<li><a href="/buildings">Edit Buildings...</a></li>
+			<li><a href="/static_items">Edit Static Items...</a></li>
+		</ul>
+	</div>
+</div>
+<div id="footer">
+	<p> (c) 2009 gethdev.com. Design by <a href="http://www.nodethirtythree.com">nodethirtythree</a> and <a href="http://www.freecsstemplates.org">Free CSS Templates</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

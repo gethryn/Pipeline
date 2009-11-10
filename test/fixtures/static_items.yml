@@ -1,0 +1,157 @@
+--- 
+static_item_00008: 
+  list_item: Other
+  created_at: 2009-10-28 05:59:34 Z
+  updated_at: 2009-10-28 05:59:34 Z
+  list_name: BusinessUnit
+  id: 8
+static_item_00019: 
+  list_item: WRKS
+  created_at: 2009-10-28 06:19:12 Z
+  updated_at: 2009-10-28 06:19:12 Z
+  list_name: MoveType
+  id: 19
+static_item_00020: 
+  list_item: Opportunity
+  created_at: 2009-10-28 06:22:33 Z
+  updated_at: 2009-10-28 06:22:33 Z
+  list_name: OpportunityStatus
+  id: 20
+static_item_00009: 
+  list_item: NSW
+  created_at: 2009-10-28 06:11:46 Z
+  updated_at: 2009-10-28 06:11:46 Z
+  list_name: State
+  id: 9
+static_item_00010: 
+  list_item: QLD
+  created_at: 2009-10-28 06:11:57 Z
+  updated_at: 2009-10-28 06:11:57 Z
+  list_name: State
+  id: 10
+static_item_00021: 
+  list_item: Qualified
+  created_at: 2009-10-28 06:22:42 Z
+  updated_at: 2009-10-28 06:22:42 Z
+  list_name: OpportunityStatus
+  id: 21
+static_item_00022: 
+  list_item: Planning
+  created_at: 2009-10-28 06:23:01 Z
+  updated_at: 2009-10-28 06:23:01 Z
+  list_name: OpportunityStatus
+  id: 22
+static_item_00011: 
+  list_item: SA
+  created_at: 2009-10-28 06:12:05 Z
+  updated_at: 2009-10-28 06:12:05 Z
+  list_name: State
+  id: 11
+static_item_00012: 
+  list_item: TAS
+  created_at: 2009-10-28 06:12:14 Z
+  updated_at: 2009-10-28 06:12:14 Z
+  list_name: State
+  id: 12
+static_item_00001: 
+  list_item: P&O
+  created_at: 2009-10-28 05:56:28 Z
+  updated_at: 2009-10-28 05:56:28 Z
+  list_name: BusinessUnit
+  id: 1
+static_item_00023: 
+  list_item: Agreed
+  created_at: 2009-10-28 06:23:11 Z
+  updated_at: 2009-10-28 06:23:11 Z
+  list_name: OpportunityStatus
+  id: 23
+static_item_00024: 
+  list_item: Delivered
+  created_at: 2009-10-28 06:23:18 Z
+  updated_at: 2009-10-28 06:23:18 Z
+  list_name: OpportunityStatus
+  id: 24
+static_item_00002: 
+  list_item: RBB
+  created_at: 2009-10-28 05:56:39 Z
+  updated_at: 2009-10-28 05:56:39 Z
+  list_name: BusinessUnit
+  id: 2
+static_item_00013: 
+  list_item: VIC
+  created_at: 2009-10-28 06:12:22 Z
+  updated_at: 2009-10-28 06:12:22 Z
+  list_name: State
+  id: 13
+static_item_00014: 
+  list_item: WA
+  created_at: 2009-10-28 06:12:33 Z
+  updated_at: 2009-10-28 06:12:33 Z
+  list_name: State
+  id: 14
+static_item_00003: 
+  list_item: WIB
+  created_at: 2009-10-28 05:58:00 Z
+  updated_at: 2009-10-28 05:58:00 Z
+  list_name: BusinessUnit
+  id: 3
+static_item_00025: 
+  list_item: CBD
+  created_at: 2009-10-28 07:13:22 Z
+  updated_at: 2009-10-28 07:13:27 Z
+  list_name: BuildingZone
+  id: 25
+static_item_00026: 
+  list_item: Metro
+  created_at: 2009-10-28 07:13:35 Z
+  updated_at: 2009-10-28 07:13:35 Z
+  list_name: BuildingZone
+  id: 26
+static_item_00004: 
+  list_item: CORP
+  created_at: 2009-10-28 05:58:14 Z
+  updated_at: 2009-10-28 05:58:14 Z
+  list_name: BusinessUnit
+  id: 4
+static_item_00015: 
+  list_item: NT
+  created_at: 2009-10-28 06:13:32 Z
+  updated_at: 2009-10-28 06:13:32 Z
+  list_name: State
+  id: 15
+static_item_00016: 
+  list_item: ACT
+  created_at: 2009-10-28 06:13:40 Z
+  updated_at: 2009-10-28 06:13:40 Z
+  list_name: State
+  id: 16
+static_item_00005: 
+  list_item: TECH
+  created_at: 2009-10-28 05:58:21 Z
+  updated_at: 2009-10-28 05:58:21 Z
+  list_name: BusinessUnit
+  id: 5
+static_item_00006: 
+  list_item: BT
+  created_at: 2009-10-28 05:58:41 Z
+  updated_at: 2009-10-28 05:58:41 Z
+  list_name: BusinessUnit
+  id: 6
+static_item_00017: 
+  list_item: MOVE
+  created_at: 2009-10-28 06:18:54 Z
+  updated_at: 2009-10-28 06:18:54 Z
+  list_name: MoveType
+  id: 17
+static_item_00018: 
+  list_item: SIZE
+  created_at: 2009-10-28 06:19:02 Z
+  updated_at: 2009-10-28 06:19:02 Z
+  list_name: MoveType
+  id: 18
+static_item_00007: 
+  list_item: SIP
+  created_at: 2009-10-28 05:59:18 Z
+  updated_at: 2009-10-28 05:59:18 Z
+  list_name: BusinessUnit
+  id: 7
