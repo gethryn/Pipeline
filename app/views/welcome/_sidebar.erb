@@ -1,0 +1,40 @@
+<% content_for :head do %>
+<title>Welcome to proportunities!</title>
+<% end %>
+
+<% content_for :navigation do %>
+	<li class="current_page_item"><%= link_to 'Home', '/' %></li>
+	<li><%= link_to 'Buildings', buildings_path %></li>
+	<li><a href="/static_items">Admin</a></li>
+<% end %>
+
+<% content_for :wide do %>
+		<div id="content">
+<% end %>
+
+<% content_for :sidebar do %>
+
+<div id="sidebar">
+	<ul>
+		<li>
+			<h2>Admin Login</h2>
+
+			<p><strong>Login script</strong> goes here &#8230;</p>
+		</li>
+		<li>
+			<h2>Scoreboard</h2>
+			<ul>
+				<li><span>WIB</span><a href="#">104</a> opportunities</li>
+				<li><span>P&amp;O</span><a href="#">58</a> opportunities</li>
+				<li><span>RBB</span><a href="#">117</a> opportunities</li>
+				<li><span>TECH</span><a href="#">257</a> opportunities</li>
+				<li><span>CORP</span><a href="#">50</a> opportunities</li>
+				<li><span>BT</span><a href="#">20</a> opportunities</li>
+				<li><span>SIP</span><a href="#">3</a> opportunities</li>
+				<li><span>Other</span><a href="#">0</a> opportunities</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<% end %>

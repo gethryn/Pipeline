@@ -1,0 +1,15 @@
+<% content_for :head do %>
+	<title>proportunities :: opportunities</title>
+<% end %>
+
+<% content_for :wide do %>
+		<div id="contentwide">
+<% end %>
+
+<% content_for :navigation do %>
+	
+	<li><<%= link_to 'Home', '/' %></li>
+	<li class="current_page_item"><%= link_to 'Buildings', buildings_path %></li>
+	<li><a href="/static_items">Admin</a></li>
+	
+<% end %>
