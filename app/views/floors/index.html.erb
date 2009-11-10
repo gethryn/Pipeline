@@ -1,0 +1,37 @@
+<h1>Maintain Floors-List</h1>
+
+<table cellpadding=4>
+  <tr bgcolor="<%=h get_img_or_colour('StandardColour','table_row') %>">
+    <th>Building</th>
+    <th>Level</th>
+		<th>Capacity</th>
+    <th>Active</th>
+		<th>&nbsp;</th>
+  	<th>&nbsp;</th>
+		<th>&nbsp;</th>
+	</tr>
+
+	<% mycount = 0 %>
+	<% @floors.sort_by { |flr| flr[:floor_level]}.each do |floor| %>
+	<% if mycount % 2 == 0 %>
+	  <tr>
+	<% else %>
+		<tr bgcolor="<%=h get_img_or_colour('StandardColour','table_row') %>">
+	<% end %>
+	
+    <td><%=h floor.building_short_name %></td>
+    <td><%=h floor.floor_level %></td>
+    <td align="center"><%=h floor.capacity %></td>
+    <td><%=h floor.active %></td>
+    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Show')), floor_path(floor) %></td>
+    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Edit')), edit_floor_path(floor) %></td>
+    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Destroy')), floor, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% mycount += 1 %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New floor', new_building_floor_path(params[:building_id]) %> | 
+<%= link_to 'Back to Building', building_path(params[:building_id]) %>

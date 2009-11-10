@@ -1,0 +1,21 @@
+--- 
+building_00002: 
+  name: 60 Martin Place
+  created_at: 2009-10-28 07:20:11 Z
+  building_zone: CBD
+  updated_at: 2009-10-28 07:20:11 Z
+  suburb: Sydney
+  id: 2
+  available_for_sip: false
+  short_name: 60MP
+  state: NSW
+building_00001: 
+  name: 275 Kent Street
+  created_at: 2009-10-28 07:18:56 Z
+  building_zone: CBD
+  updated_at: 2009-10-28 07:18:56 Z
+  suburb: Sydney
+  id: 1
+  available_for_sip: false
+  short_name: 275K
+  state: NSW

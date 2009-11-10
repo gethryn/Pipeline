@@ -1,0 +1,42 @@
+<table>
+  <tr bgcolor="<%=h get_img_or_colour('StandardColour','table_row') %>">
+		<th>Type</th>
+		<th>&nbsp;</th>
+		<th>BU</th>
+    <th>Team</th>
+		<th>Est. Date</th>
+    <th>From</th>
+		<th><img src="<%=h get_img_or_colour('StandardIcon','Person') %>"</th>
+		<th>To</th>
+		<th><img src="<%=h get_img_or_colour('StandardIcon','Person') %>"</th>
+		<th>&nbsp;</th>
+		<th>&nbsp;</th>
+		<th>&nbsp;</th>
+  </tr>
+	<% mycount = 0 %>
+	<% @opportunities.each do |opportunity| %>
+	<% if mycount % 2 == 0 %>
+	  <tr>
+	<% else %>
+		<tr bgcolor="<%=h get_img_or_colour('StandardColour','table_row') %>">
+	<% end %>
+			<td><img src="<%=h get_img_or_colour('OpportunityStatus',opportunity.status) %>"/>&nbsp;<img src="<%=h get_img_or_colour('MoveType',opportunity.move_type) %>"/>
+			<td bgcolor="<%=h get_img_or_colour('BusinessUnit',opportunity.business_unit) %>">&nbsp;</td>
+	    <td width="30px"><%=h opportunity.business_unit %></td>
+	    <td width="230px"><%=h opportunity.team %></td>
+			<td width="100px"><%=h opportunity.est_date %>
+	    <td width="100px"><%=h opportunity.building_short_name_with_floor %></td>
+			<td width="30px" align="center"><%=h opportunity.num_seats_departing %></td>
+			<td width="100px"><%=h opportunity.to_building_short_name_with_floor %></td>
+			<td width="30px" align="center"><%=h opportunity.num_seats_arriving %></td>
+	    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Show'), :border=>0), opportunity %></td>
+	    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Edit'), :border=>0), edit_opportunity_path(opportunity) %></td>
+	    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Destroy'), :border=>0), opportunity, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% mycount += 1 %>
+	<% end %>
+	</table>
+
+<br />
+
+<%= link_to 'New opportunity', new_building_opportunity_path(params[:building_id]) %>

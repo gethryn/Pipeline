@@ -1,0 +1,23 @@
+<p>
+  <b>Building:</b>
+  <%=h @floor.building_short_name %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%=h @floor.floor_level %>
+</p>
+
+<p>
+	<strong>Capacity:</strong>
+	<%=h @floor.capacity %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @floor.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_floor_path(@floor) %> |
+<%= link_to 'Back', building_floors_path(@floor.building) %>

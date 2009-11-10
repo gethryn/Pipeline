@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  floor_id: 1
+  business_unit: MyString
+  team: MyString
+  value: 1
+  type: MyString
+  notes: MyText
+  status: MyString
+  key_move: false
+  applied: false
+
+two:
+  floor_id: 1
+  business_unit: MyString
+  team: MyString
+  value: 1
+  type: MyString
+  notes: MyText
+  status: MyString
+  key_move: false
+  applied: false

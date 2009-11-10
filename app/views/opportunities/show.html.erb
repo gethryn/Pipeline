@@ -1,0 +1,53 @@
+<p>
+  <strong><img src="<%=h get_img_or_colour('MoveType',@opportunity.move_type) %>"/>&nbsp;<%=h @opportunity.move_type %></strong> opportunity for 
+	<strong><%=h @opportunity.team %> [<%=h @opportunity.business_unit %>]</strong>.
+</p>
+<p> 
+	<strong><img src="<%=h get_img_or_colour('OpportunityStatus', @opportunity.status) %>"/>&nbsp;<%=h @opportunity.status %></strong> status.
+</p>
+<p>
+	Estimated Date for Delivery: <%=h @opportunity.est_date %> 
+	<% if @opportunity.est_date < Time.now.to_date %>
+		(<%=h distance_of_time_in_words_to_now(@opportunity.est_date)%> ago)
+	<% else %>
+		(in <%=h distance_of_time_in_words_to_now(@opportunity.est_date)%>)
+	<% end %>
+</p>
+<p>
+<table>
+	<tr>
+		<td width="100px"><strong>Departing</strong></td>
+		<td width="300px"><%=h @opportunity.building_short_name_with_floor %></td>
+		<td width="100px"><%=h @opportunity.num_seats_departing %> seats</td>
+	</tr>
+	<tr>
+		<td><strong>Arriving</strong></td>
+		<td><%=h @opportunity.to_building_short_name_with_floor %></td>
+		<td><%=h @opportunity.num_seats_arriving %> 
+			<% 	if @opportunity.num_seats_arriving.nil? != true %>
+						seats
+			<%  end
+			 		if @opportunity.size_change? %>
+						<img src="/images/building_error.png"/>
+			<%	end %>
+		</td>
+	</tr>
+</table>
+</p>	
+<p>
+  <b>Notes:</b>
+  <%=h @opportunity.notes %>
+</p>
+
+<p>
+  <b>Key move:</b> <%=h @opportunity.key_move %>&nbsp;&nbsp;&nbsp;
+  <b>Applied:</b> <%=h @opportunity.applied %>
+</p>
+<p class="small">
+	Created <%=h @opportunity.created_at.in_time_zone %> (<%=h time_ago_in_words(@opportunity.created_at) %> ago)<br />
+	Updated <%=h @opportunity.updated_at.in_time_zone %> (<%=h time_ago_in_words(@opportunity.updated_at) %> ago)
+</p>
+
+
+<%= link_to 'Edit', edit_opportunity_path(@opportunity) %> |
+<%= link_to 'Back', building_path(@opportunity.floor.building) %>

@@ -1,0 +1,89 @@
+<h1>Maintain Building List</h1>
+
+<table cellpadding=4>
+  <tr bgcolor="<%=h get_img_or_colour('StandardColour','table_row') %>">
+    <th>Short name</th>
+    <th>Name</th>
+    <th>Suburb</th>
+    <th>State</th>
+		<th><%= image_tag(get_img_or_colour('StandardIcon','Zone')) %> Zone</th>
+    <th><%= image_tag(get_img_or_colour('StandardIcon','SIP'), :alt => 'SIP Building?') %> SIP</th>
+		<th># Opps</th>
+		<th>Floors</th>
+		<th>Capacity</th>
+		<th>&nbsp;</th>
+		<th>&nbsp;</th>
+		<th>&nbsp;</th>
+  </tr>
+	<% mycount = 0 %>
+	<% @buildings.sort_by {|bdg| [bdg[:building_zone], -bdg.capacity]}.each do |building| %>
+	<% if mycount % 2 == 0 %>
+	  <tr>
+	<% else %>
+		<tr bgcolor="<%=h get_img_or_colour('StandardColour','table_row') %>">
+	<% end %>
+    <td><%=h building.short_name %></td>
+    <td><%=h building.name %></td>
+    <td><%=h building.suburb %></td>
+    <td><%=h building.state %></td>
+		<td align="center"><%=h building.building_zone %></td>
+    <td align="center"><% if building.available_for_sip %>
+					<%= image_tag(get_img_or_colour('StandardIcon','Yes')) %>
+				<% else %>
+				  <%= image_tag(get_img_or_colour('StandardIcon','No')) %>
+				<% end %>
+		</td>
+		<td align="center"><%= link_to "#{building.opportunity_count}", building %></td>
+		<td align="center"><%= link_to "#{building.floors.size}", building_floors_path(building) %></td>
+		<td align="center"><%= building.capacity %></td>
+    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Show'), :border=>0), building %></td>
+    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Edit'), :border=>0), edit_building_path(building) %></td>
+    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Destroy'), :border=>0), building, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% mycount += 1 %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New building', new_building_path %>
+<p>
+	<%=
+	  ambling_chart(:column,  :data_file => 'buildings/building_capacity_column_data/1',
+	                          :id => 'building_capacity', :width => 800, :height => 600,
+	                          :chart_settings => Ambling::Column::Settings.new({
+															:depth => 5,
+															:angle => 25,
+															:decimals_separator => '.',
+															:digits_after_decimal => 0,	
+	                            :column => {
+	                              :type => "stacked", :width => 90, :spacing => 5,
+	                              :balloon_text => "{value} seats for {title}",
+																:grow_time => 3,
+																:grow_effect => 'elastic',
+																:alpha => 60
+	                            },
+	                            :grid => {
+	                              :category => {:alpha => 0}, :value => {:alpha => 10}
+	                            },
+	                            :values => {
+	                              :category => {:enabled => true}
+	                            },
+	                            :plot_area => {
+	                              :margins => {:left => 40, :top => 40, :right => 100, :bottom => 40}
+	                            },
+	                            :legend => {
+	                              :enabled => true, :x => 715, :y => 20, :width => 85, :text_color => '#000',
+	                              :max_columns => 1, :spacing => 1, :text_size => 10,
+	                              :key => {:size => 10}
+	                            },
+	                            :labels => {
+	                              :label => [
+	                                {:x => 300, :y => 585, :text => "NSW Restack FY10", :align => "center", :width => 180,
+	                                  :text_size => 12}
+	                              ]
+	                            }
+	                          }).to_xml) do
+	                      content_tag('p', "To see this page properly, you need to upgrade your Flash Player")
+	  end
+	  %>

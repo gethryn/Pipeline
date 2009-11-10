@@ -1,0 +1,44 @@
+<h1>New opportunity</h1>
+
+<% @building = Building.find(params[:building_id]) %>
+
+<% form_for([@building, @opportunity]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :move_type %> <img src="/images/bullet_red.png"/><br />
+    <%= f.collection_select :move_type, @move_types, :list_item, :list_item %>
+  </p>
+  <p>
+    <%= f.label 'From Floor and Seats' %> <img src="/images/bullet_red.png"/><br />
+    <%= f.collection_select :floor_id, @floors, :id, :building_short_name_with_floor %> <%= f.text_field :num_seats_departing, :size =>10 %>
+  </p>
+  <p>
+    <%= f.label 'To Floor and Seats' %> <img src="/images/bullet_red.png"/><br />
+    <%= f.collection_select :floor_id_arriving, @floors, :id, :building_short_name_with_floor %> <%= f.text_field :num_seats_arriving, :size => 10 %>
+  </p>
+  <p>
+    <%= f.label 'Business Unit & Team Name' %> <img src="/images/bullet_red.png"/><br />
+    <%= f.collection_select :business_unit, @business_units, :list_item, :list_item %> <%= f.text_field :team %>
+  </p>
+  <p>
+    <%= f.label :est_date %> <img src="/images/bullet_red.png"/><br />
+    <%= f.date_select :est_date %>
+  </p>
+  <p>
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes, :size => '40x8' %>
+  </p>
+  <p>
+    <%= f.label :status %> <img src="/images/bullet_red.png"/><br />
+    <%= f.collection_select :status, @opportunity_statuses, :list_item, :list_item %> &nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.check_box :key_move %> <%= f.label :key_move %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= f.check_box :applied %> <%= f.label :applied %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>&nbsp;&nbsp;&nbsp;&nbsp;or go
+		<%= link_to 'Back', buildings_path %> to the list
+  </p>
+<% end %>
+
+<!-- , {},{:multiple => true} -->
