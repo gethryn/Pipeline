@@ -14,7 +14,7 @@ Released   : 20090918
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>propertunities: <%= controller.action_name %></title>
+<%= yield :head %>
   <%= stylesheet_link_tag 'style' %>
 	<%= javascript_include_tag :all %> <!-- For example -->
 </head>
@@ -29,8 +29,7 @@ Released   : 20090918
 	<!-- end #header -->
 	<div id="menu">
 		<ul>
-			<li><a href="/index.html">Home</a></li>
-			<li class="current_page_item"><%= link_to 'Buildings', buildings_path %></li>
+			<%= yield :sidebar %>
 		</ul>
 	</div>
 	<!-- end #menu -->

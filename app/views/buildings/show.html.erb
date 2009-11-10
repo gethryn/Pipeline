@@ -1,3 +1,5 @@
+<%= render :partial => "sidebar" %>
+
 <p class="small"><strong>CBD:</strong> | 
 	<% @buildings.sort_by {|bdg| bdg[:short_name]}.each do |b| %>
 	<% if b.building_zone == "CBD" %>
