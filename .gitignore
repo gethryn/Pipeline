@@ -1,3 +1,4 @@
-*.log
-tmp/**/*
 .DS_store
+tmp/**/*
+*.log
+*.sqlite3

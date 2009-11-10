@@ -69,8 +69,8 @@ class OpportunitiesController < ApplicationController
   # PUT /opportunities/1.xml
   def update
     @opportunity = Opportunity.find(params[:id])
-    @floor = @opportunity.floor
-    @building = @floor.building
+    @floor = Floor.find(params[:floor_id])
+    @building = Building.find(@floor.building)
 
     respond_to do |format|
       if @opportunity.update_attributes(params[:opportunity])
@@ -98,5 +98,4 @@ class OpportunitiesController < ApplicationController
       format.xml  { head :ok }
     end
   end
-  
 end
