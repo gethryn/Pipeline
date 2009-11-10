@@ -4,7 +4,7 @@ class BuildingsController < ApplicationController
   # GET /buildings
   # GET /buildings.xml
   def index
-    @buildings = Building.all
+    @buildings = Building.find(:all, :include => :floors )
 
     respond_to do |format|
       format.html # index.html.erb
@@ -92,8 +92,7 @@ class BuildingsController < ApplicationController
   
   
   def building_capacity_column_data
-    @buildings = Building.all
-    @buildings = @buildings.sort_by { |b| [b[:building_zone], -b.capacity] }
+    @buildings = Building.find(:all, :include => :floors).sort_by { |b| [b[:building_zone], -b.capacity] }
     chart = Ambling::Data::ColumnChart.new
     chart.graphs << Ambling::Data::ColumnGraph.new([], :title => "Capacity")
     @buildings.each do |b|

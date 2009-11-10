@@ -1,15 +1,15 @@
 <%= render :partial => "sidebar" %>
 <table>
-  <tr bgcolor="<%=h get_img_or_colour('StandardColour','table_row') %>">
+  <tr bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">
 		<th>Type</th>
 		<th>&nbsp;</th>
 		<th>BU</th>
     <th>Team</th>
 		<th>Est. Date</th>
     <th>From</th>
-		<th><img src="<%=h get_img_or_colour('StandardIcon','Person') %>"</th>
+		<th><img src="<%=h get_yaml_item('StandardIcon','Person') %>"</th>
 		<th>To</th>
-		<th><img src="<%=h get_img_or_colour('StandardIcon','Person') %>"</th>
+		<th><img src="<%=h get_yaml_item('StandardIcon','Person') %>"</th>
 		<th>&nbsp;</th>
 		<th>&nbsp;</th>
 		<th>&nbsp;</th>
@@ -19,10 +19,10 @@
 	<% if mycount % 2 == 0 %>
 	  <tr>
 	<% else %>
-		<tr bgcolor="<%=h get_img_or_colour('StandardColour','table_row') %>">
+		<tr bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">
 	<% end %>
-			<td><img src="<%=h get_img_or_colour('OpportunityStatus',opportunity.status) %>"/>&nbsp;<img src="<%=h get_img_or_colour('MoveType',opportunity.move_type) %>"/>
-			<td bgcolor="<%=h get_img_or_colour('BusinessUnit',opportunity.business_unit) %>">&nbsp;</td>
+			<td><img src="<%=h get_yaml_item('OpportunityStatus',opportunity.status) %>"/>&nbsp;<img src="<%=h get_yaml_item('MoveType',opportunity.move_type) %>"/>
+			<td bgcolor="<%=h get_yaml_item('BusinessUnit',opportunity.business_unit) %>">&nbsp;</td>
 	    <td width="30px"><%=h opportunity.business_unit %></td>
 	    <td width="230px"><%=h opportunity.team %></td>
 			<td width="100px"><%=h opportunity.est_date %>
@@ -30,9 +30,9 @@
 			<td width="30px" align="center"><%=h opportunity.num_seats_departing %></td>
 			<td width="100px"><%=h opportunity.to_building_short_name_with_floor %></td>
 			<td width="30px" align="center"><%=h opportunity.num_seats_arriving %></td>
-	    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Show'), :border=>0), opportunity %></td>
-	    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Edit'), :border=>0), edit_opportunity_path(opportunity) %></td>
-	    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Destroy'), :border=>0), opportunity, :confirm => 'Are you sure?', :method => :delete %></td>
+	    <td><%= link_to image_tag(get_yaml_item('StandardIcon','Show'), :border=>0), opportunity %></td>
+	    <td><%= link_to image_tag(get_yaml_item('StandardIcon','Edit'), :border=>0), edit_opportunity_path(opportunity) %></td>
+	    <td><%= link_to image_tag(get_yaml_item('StandardIcon','Destroy'), :border=>0), opportunity, :confirm => 'Are you sure?', :method => :delete %></td>
 	  </tr>
 	<% mycount += 1 %>
 	<% end %>

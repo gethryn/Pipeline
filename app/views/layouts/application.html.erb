@@ -29,17 +29,18 @@ Released   : 20090918
 	<!-- end #header -->
 	<div id="menu">
 		<ul>
-			<%= yield :sidebar %>
+			<%= yield :navigation %>
 		</ul>
 	</div>
 	<!-- end #menu -->
 	<div id="page">
-			<div id="contentwide">
+			<%= yield :wide %>
 				<p style="color: green"><%= flash[:notice] %></p>
 						<%= yield %>
 				<div style="clear: both;">&nbsp;</div>
 			</div>
 			<!-- end #content -->
+			<%= yield :sidebar %>
 		<div style="clear: both;">&nbsp;</div>
 	</div>
 	<!-- end #page -->

@@ -2,7 +2,7 @@
 <h1>Maintain Floors-List</h1>
 
 <table cellpadding=4>
-  <tr bgcolor="<%=h get_img_or_colour('StandardColour','table_row') %>">
+  <tr bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">
     <th>Building</th>
     <th>Level</th>
 		<th>Capacity</th>
@@ -17,16 +17,16 @@
 	<% if mycount % 2 == 0 %>
 	  <tr>
 	<% else %>
-		<tr bgcolor="<%=h get_img_or_colour('StandardColour','table_row') %>">
+		<tr bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">
 	<% end %>
 	
     <td><%=h floor.building_short_name %></td>
     <td><%=h floor.floor_level %></td>
     <td align="center"><%=h floor.capacity %></td>
     <td><%=h floor.active %></td>
-    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Show')), floor_path(floor) %></td>
-    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Edit')), edit_floor_path(floor) %></td>
-    <td><%= link_to image_tag(get_img_or_colour('StandardIcon','Destroy')), floor, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to image_tag(get_yaml_item('StandardIcon','Show')), floor_path(floor) %></td>
+    <td><%= link_to image_tag(get_yaml_item('StandardIcon','Edit')), edit_floor_path(floor) %></td>
+    <td><%= link_to image_tag(get_yaml_item('StandardIcon','Destroy')), floor, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% mycount += 1 %>
 <% end %>

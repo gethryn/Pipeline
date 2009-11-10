@@ -1,10 +1,10 @@
 <%= render :partial => "sidebar" %>
 <p>
-  <strong><img src="<%=h get_img_or_colour('MoveType',@opportunity.move_type) %>"/>&nbsp;<%=h @opportunity.move_type %></strong> opportunity for 
+  <strong><img src="<%=h get_yaml_item('MoveType',@opportunity.move_type) %>"/>&nbsp;<%=h @opportunity.move_type %></strong> opportunity for 
 	<strong><%=h @opportunity.team %> [<%=h @opportunity.business_unit %>]</strong>.
 </p>
 <p> 
-	<strong><img src="<%=h get_img_or_colour('OpportunityStatus', @opportunity.status) %>"/>&nbsp;<%=h @opportunity.status %></strong> status.
+	<strong><img src="<%=h get_yaml_item('OpportunityStatus', @opportunity.status) %>"/>&nbsp;<%=h @opportunity.status %></strong> status.
 </p>
 <p>
 	Estimated Date for Delivery: <%=h @opportunity.est_date %> 

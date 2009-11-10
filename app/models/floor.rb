@@ -8,15 +8,17 @@ class Floor < ActiveRecord::Base
   validates_numericality_of :capacity, :min => 0
   
   def building_short_name_with_floor
-    "#{Building.find(self.building_id).short_name} - #{self.floor_level}"
+    "#{self.building.short_name} - #{self.floor_level}"
   end
   
   def building_short_name
-    Building.find(self.building_id).short_name
+    #Building.find(self.building_id).short_name
+    self.building.short_name
   end
   
   def opportunity_count
-    Opportunity.find(:all, :conditions => { :floor_id => self.id }).count
+    #Opportunity.find(:all, :conditions => { :floor_id => self.id }).count
+    self.opportunities.size
   end
 
 end

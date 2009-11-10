@@ -3,4 +3,7 @@ module ApplicationHelper
   def get_img_or_colour(listname,listitem)
     StaticItem.find(:first, :conditions => {:list_name => listname, :list_item => listitem}).list_img
   end
+  def get_yaml_item(listname,listitem)
+    APP_CONFIG[listname][listitem] || ""
+  end
 end

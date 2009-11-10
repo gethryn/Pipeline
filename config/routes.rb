@@ -7,6 +7,8 @@ ActionController::Routing::Routes.draw do |map|
     end
     buildings.resources :opportunities
   end
+  
+  map.root :controller => "welcome"
 
   # The priority is based upon order of creation: first created -> highest priority.
 
