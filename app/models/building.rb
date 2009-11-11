@@ -6,12 +6,15 @@ class Building < ActiveRecord::Base
   validates_presence_of :name, :short_name, :state, :suburb
   validates_uniqueness_of :short_name
   
+  named_scope :in_cbd, :conditions => { :building_zone => 'CBD' }  # ALELUJAH!
+  named_scope :in_metro, :conditions => {:building_zone => 'Metro'}
+  named_scope :avail_for_sip, :conditions => { :available_for_sip => true }
+  
   def opportunity_count
     self.floors.collect(&:opportunity_count).sum
   end
 
   def floor_list
-    #Floor.find(:all, :conditions => {:building_id => self.id}).collect { |flr| flr.floor_level }
     self.floors.collect(&:floor_list)
   end
   

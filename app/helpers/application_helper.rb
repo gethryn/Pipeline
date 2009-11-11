@@ -6,4 +6,7 @@ module ApplicationHelper
   def get_yaml_item(listname,listitem)
     APP_CONFIG[listname][listitem] || ""
   end
+  def get_yaml_keys(listname)
+    APP_CONFIG[listname].keys || []
+  end
 end

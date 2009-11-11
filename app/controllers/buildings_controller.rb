@@ -15,8 +15,9 @@ class BuildingsController < ApplicationController
   # GET /buildings/1
   # GET /buildings/1.xml
   def show
-    @buildings = Building.all
     @building = Building.find(params[:id])
+    @cbd = Building.in_cbd.collect(&:short_name).sort
+    @metro = Building.in_metro.collect(&:short_name).sort
 
     respond_to do |format|
       format.html # show.html.erb

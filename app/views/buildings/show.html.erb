@@ -1,17 +1,12 @@
 <%= render :partial => "sidebar" %>
 
 <p class="small"><strong>CBD:</strong> | 
-	<% @buildings.sort_by {|bdg| bdg[:short_name]}.each do |b| %>
-	<% if b.building_zone == "CBD" %>
-		[<%= link_to b.short_name, b %>] (<%=h b.opportunity_count %>) | 
+	<% @cbd.each do |bdg| %>
+		[<%= link_to bdg, Building.find_by_short_name(bdg) %>] | 
 	<% end %>
-	<% end %>
-	<br />
-	<strong>METRO:</strong> | 
-	<% @buildings.sort_by {|bdg| bdg[:short_name]}.each do |b| %>
-	<% if b.building_zone == "Metro" %>
-		[<%= link_to b.short_name, b %>] (<%=h b.opportunity_count %>) | 
-	<% end %>
+	<strong>&nbsp;&nbsp;&nbsp;METRO:</strong> | 
+	<% @metro.each do |bdg| %>
+		[<%= link_to bdg, Building.find_by_short_name(bdg) %>] | 
 	<% end %>
 </p>
 
