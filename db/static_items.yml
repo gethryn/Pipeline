@@ -35,5 +35,12 @@ StandardIcon:
     Date: /images/calendar_view_day.png
 StandardColour:
     TableRow: "#D5E8FF"
-
-        
+State:
+    NSW: New South Wales
+    QLD: Queensland
+    VIC: Victoria
+    WA: Western Australia
+    SA: South Australia
+    TAS: Tasmania
+    NT: Northern Territory
+    ACT: Australian Capital Territory

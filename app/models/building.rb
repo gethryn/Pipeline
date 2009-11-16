@@ -2,6 +2,7 @@ class Building < ActiveRecord::Base
   
   has_many :floors
   has_many :opportunities, :through => :floors
+  has_many :building_occupancies
   
   validates_presence_of :name, :short_name, :state, :suburb
   validates_uniqueness_of :short_name

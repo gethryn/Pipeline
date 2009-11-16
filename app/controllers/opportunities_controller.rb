@@ -2,7 +2,7 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities
   # GET /opportunities.xml
   def index
-    @opportunities = Opportunity.all
+    @opportunities = Opportunity.paginate :per_page => params[:per_page] || 5, :page => params[:page] || 1, :order => :created_at
     @statuses = APP_CONFIG['OpportunityStatus'].keys || StaticItem.find(:all, :conditions => { :list_name => 'OpportunityStatus'})
 
     respond_to do |format|

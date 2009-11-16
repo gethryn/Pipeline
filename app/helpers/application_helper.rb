@@ -7,7 +7,7 @@ module ApplicationHelper
     APP_CONFIG[listname][listitem] || ""
   end
   def get_yaml_keys(listname)
-    APP_CONFIG[listname].keys || []
+    APP_CONFIG[listname].keys.sort || []
   end
   def get_building_from_short_name(shortname)
     Building.find_by_short_name(shortname)

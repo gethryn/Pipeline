@@ -1,0 +1,179 @@
+# Use this to produce quick graphs for updates to NSW Restack
+# Reproduce programatically when updates required.
+#
+275K:
+  BuildingZone: CBD
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 1672
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+60MP:
+  BuildingZone: CBD
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+255E:
+  BuildingZone: CBD
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+182G:
+  BuildingZone: CBD
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+EPP:
+  BuildingZone: Metro
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+CON:
+  BuildingZone: Metro
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+KOG:
+  BuildingZone: Metro
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+33P:
+  BuildingZone: CBD
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+35P:
+  BuildingZone: CBD
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+2CT:
+  BuildingZone: CBD
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+32MG:
+  BuildingZone: Metro
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+55M:
+  BuildingZone: CBD
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+75G:
+  BuildingZone: Metro
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+80G:
+  BuildingZone: Metro
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+316G:
+  BuildingZone: CBD
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0
+400G:
+  BuildingZone: CBD
+  Capacity: 0
+  P&O: 0
+  RBB: 0
+  WIB: 0
+  TECH: 0
+  BT: 0
+  CORP: 0
+  SIP: 0
+  Other: 0

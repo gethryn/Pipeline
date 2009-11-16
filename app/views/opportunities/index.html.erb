@@ -1,4 +1,7 @@
 <%= render :partial => "sidebar" %>
+
+<h3><%= page_entries_info @opportunities %></h3>
+<br />
 <table>
   <tr bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">
 		<th>Type</th>
@@ -37,6 +40,15 @@
 	<% mycount += 1 %>
 	<% end %>
 	</table>
+<br />
+<p><small>
+	<%= will_paginate @opportunities %>
+	Per Page: <%= link_to '5', '/opportunities?per_page=5' %> |
+						<%= link_to '10', '/opportunities?per_page=10' %> | 
+						<%= link_to '25', '/opportunities?per_page=25' %> | 
+						<%= link_to '50', '/opportunities?per_page=50' %> | 
+						currently <%=h params[:per_page] -%> items per page
+</small></p>
 
 <br />
 
