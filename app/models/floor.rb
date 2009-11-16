@@ -6,6 +6,7 @@ class Floor < ActiveRecord::Base
   validates_presence_of :floor_level
   validates_length_of :floor_level, :within => 1..3
   validates_numericality_of :capacity, :min => 0
+  validates_format_of :floor_level, :with => /^(L\d{2}|[UL]?G|M|B[1-9])$/, :on => :create, :message => "is not in the required format, B9-B1, LG, G, UG, M, L00-L99"
   
   def building_short_name_with_floor
     "#{self.building.short_name} - #{self.floor_level}"

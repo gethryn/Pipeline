@@ -9,4 +9,7 @@ module ApplicationHelper
   def get_yaml_keys(listname)
     APP_CONFIG[listname].keys || []
   end
+  def get_building_from_short_name(shortname)
+    Building.find_by_short_name(shortname)
+  end
 end

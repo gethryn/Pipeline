@@ -28,8 +28,8 @@ class BuildingsController < ApplicationController
   # GET /buildings/new
   # GET /buildings/new.xml
   def new
-    @states = StaticItem.find(:all, :conditions => {:list_name => 'State'})
-    @zones = StaticItem.find(:all, :conditions => {:list_name => 'BuildingZone'})
+    @states = StaticItem.find(:all, :conditions => {:list_name => 'State'}).collect(&:list_item)
+    @zones = StaticItem.find(:all, :conditions => {:list_name => 'BuildingZone'}).collect(&:list_item)
     @building = Building.new
 
     respond_to do |format|
@@ -41,8 +41,8 @@ class BuildingsController < ApplicationController
   # GET /buildings/1/edit
   def edit
     @building = Building.find(params[:id])
-    @states = StaticItem.find(:all, :conditions => {:list_name => 'State'})
-    @zones = StaticItem.find(:all, :conditions => {:list_name => 'BuildingZone'})
+    @states = StaticItem.find(:all, :conditions => {:list_name => 'State'}).collect(&:list_item)
+    @zones = StaticItem.find(:all, :conditions => {:list_name => 'BuildingZone'}).collect(&:list_item)
   end
 
   # POST /buildings

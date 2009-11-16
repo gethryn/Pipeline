@@ -1,0 +1,286 @@
+Script started on Wed Nov 11 17:24:10 2009
+[geth] ~/development/rails/pipeline$ sudo gem install mysql -v 2.7.1[K[K[K[K[K[2Puninstall mysql[11Pgem uninstall[Ksudo gem removels[Kcd gethusers[1Pgeth[K[K[K[K[K[K[Kscriptc[K/console
+Loading development environment (Rails 2.3.4)
+>> requior[K[Kre 'f[Kfasterv[Ksfd[K[K[Kcsv'
+=> []
+>> fasters[Kcsv.parse(RAILS_ROOT + +[K'/db/floors.csv').[K f[Kdo |row|
+?> row.inspect
+>> end
+NameError: undefined local variable or method `fastercsv' for #<Object:0x100177298>
+	from (irb):2
+>> exit
+[geth] ~/development/rails/pipeline$ script/console
+Loading development environment (Rails 2.3.4)
+>> require "fastercsv"
+=> []
+>> csv data =[K[K[K[K[Kdata="jones,bob,165\n"
+=> "jones,bob,165\n"
+>> csvdata="jones,bob,165\n"[P"[4h [4l"[4h<[4l"[4h<[4l"[4h [4l""j[4h~[4lj[4h~[4lj[4h~[4lj[Pj[Pj[Pjjones,bob,165\n"[K"[K"[K"[K"[K"[K"[K"[K"[K"[K"[K"[K"[K"[K"[Ks"m"i"t"h","t"i"m","1"0"0"\"n""
+=> "jones,bob,165\nsmith,tim,100\n"
+>> csvdata << "smith,tim,100\n""[K"[K"[K"[K"[K"[K"[K"[K"[K"[K"[K"[K"[K"[K"[Kd"o"e","h"o""[Kj""[K"[Kj"o"h"n","1"3"5"\"n"
+=> "jones,bob,165\nsmith,tim,100\ndoe,john,135\n"
+>> fasterdsv.parse(csvdata) do |row|
+?> lastname, firstname iq = *row
+>> puts "#{firstname} #{lastname} has an IQ of !{[K[K#{iq{[K}"
+>> end
+SyntaxError: compile error
+(irb):6: syntax error, unexpected tIDENTIFIER, expecting kDO or '{' or '('
+lastname, firstname iq = *row
+                      ^
+	from (irb):8
+>> quit
+[geth] ~/development/rails/pipeline$ script/consoleudo gem install mysql -v [2Puninstall mysqlinstall mysql -v [12Pcript/console[Ke .
+bash: e: command not found
+[geth] ~/development/rails/pipeline$ e .
+bash: e: command not found
+[geth] ~/development/rails/pipeline$ mat .
+bash: mat: command not found
+[geth] ~/development/rails/pipeline$ mat [Ke .
+[geth] ~/development/rails/pipeline$ mate .[1P .[2Pe[C[Cscript/console
+Loading development environment (Rails 2.3.4)
+>> require "fastervs[K[Kcsv"
+=> []
+>> FasterV[KSC[K[KCSV/[K.parse("gethryn,20\nC[Kclas[Ke[Kre,21\'[K[K") do |row|
+?> p[Krpw[K[Koe[Kw.inspect
+>> end
+=> nil
+>> endrow.inspect[11DFasterCSV.parse("gethryn,20\nclare,21") do |row|
+?> p row[0]
+>> p roe[Kw[1]
+>> end
+"gethryn"
+"20"
+"clare"
+"21"
+=> nil
+>> reload!
+Reloading...
+=> true
+>> cls
+NameError: undefined local variable or method `cls' for #<Object:0x100177298>
+	from (irb):10
+>> @b = Buildin.i[K[Kg.in_cbf[Kd
+The DL driver for sqlite3-ruby is deprecated and will be removed
+in a future release. Please update your installation to use the
+Native driver.
+=> [#<Building id: 1, name: "275 Kent Street", short_name: "275K", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: false, created_at: "2009-10-28 07:18:56", updated_at: "2009-11-09 14:21:33", floors_count: 33>, #<Building id: 2, name: "60 Martin Place", short_name: "60MP", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: false, created_at: "2009-10-28 07:20:11", updated_at: "2009-10-28 07:20:11", floors_count: 30>, #<Building id: 3, name: "255 Elizabeth Street", short_name: "255E", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: true, created_at: "2009-11-03 11:44:10", updated_at: "2009-11-03 11:44:10", floors_count: 2>, #<Building id: 4, name: "182 George Street", short_name: "182G", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: false, created_at: "2009-11-03 11:58:32", updated_at: "2009-11-03 11:58:32", floors_count: 17>, #<Building id: 8, name: "33 Pitt Street", short_name: "33P", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: false, created_at: "2009-11-03 12:52:52", updated_at: "2009-11-03 12:52:52", floors_count: 11>, #<Building id: 9, name: "35 Pitt Street", short_name: "35P", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: false, created_at: "2009-11-03 12:53:07", updated_at: "2009-11-03 12:53:07", floors_count: 13>, #<Building id: 10, name: "2 Chifley Square", short_name: "2CT", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: false, created_at: "2009-11-03 12:53:31", updated_at: "2009-11-03 12:53:31", floors_count: 1>, #<Building id: 12, name: "55 Market Street", short_name: "55M", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: true, created_at: "2009-11-03 12:55:24", updated_at: "2009-11-03 12:55:24", floors_count: 7>, #<Building id: 15, name: "316 George Street", short_name: "316G", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: true, created_at: "2009-11-03 12:56:46", updated_at: "2009-11-03 12:56:46", floors_count: 5>, #<Building id: 16, name: "400 George Street", short_name: "400G", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: false, created_at: "2009-11-09 11:55:10", updated_at: "2009-11-09 11:55:10", floors_count: 1>]
+>> @b = Building.in_cbd.sort[K[K[K[Ksort[K[K[K[Kcollect(#[K&:floor[K[K[K[K[Kshort_name)
+=> ["275K", "60MP", "255E", "182G", "33P", "35P", "2CT", "55M", "316G", "400G"]
+>> @b = Building.in_cbd.collect(&:short_name).sort
+=> ["182G", "255E", "275K", "2CT", "316G", "33P", "35P", "400G", "55M", "60MP"]
+>> reload!
+Reloading...
+=> true
+>> reload![7D@b = Building.in_cbd.collect(&:short_name).sort[5D[K[22D[K[20Dcls[K@b = Building.in_cbd.avail.fi[Kor_[K[K[K[K[K_sor[K[K[Kfor_sip
+NoMethodError: undefined method `avail_for_sip' for #<Class:0x1034d7ac0>
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:1959:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `send'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2143:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:174:in `method_missing'
+	from (irb):15
+	from :0
+>> @b = Building.in_cbd.avail_for_sip?
+ArgumentError: Unknown key(s): confitions
+	from /Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/hash/keys.rb:47:in `assert_valid_keys'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2101:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:174:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:188:in `load_found'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:166:in `proxy_found'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:109:in `inspect'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:302:in `output_value'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:151:in `eval_input'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:263:in `signal_status'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:147:in `eval_input'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:146:in `eval_input'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:70:in `start'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:69:in `catch'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:69:in `start'
+	from /usr/bin/irb:13>> 
+?> c
+NameError: undefined local variable or method `c' for #<Object:0x100177298>
+	from (irb):18
+	from :0
+>> c@b = Building.in_cbd.avail_for_sip?
+ArgumentError: Unknown key(s): confitions
+	from /Library/Ruby/Gems/1.8/gems/activesupport-2.3.4/lib/active_support/core_ext/hash/keys.rb:47:in `assert_valid_keys'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2101:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:174:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:188:in `load_found'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:166:in `proxy_found'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:109:in `inspect'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:302:in `output_value'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:151:in `eval_input'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:263:in `signal_status'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:147:in `eval_input'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:146:in `eval_input'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:70:in `start'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:69:in `catch'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/irb.rb:69:in `start'
+	from /usr/bin/irb:13>> @b = Building.in_cbd.avail_for_sip?[35Dc[K@b = Building.in_cbd.avail_for_sip?[K
+NoMethodError: undefined method `avail_for_sip' for #<Class:0x1034d7ac0>
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:1959:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `send'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2143:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:174:in `method_missing'
+	from (irb):20
+	from :0
+>> ro[Keload!
+Reloading...
+=> true
+>> reload![7D@b = Building.in_cbd.avail_for_sip?[35Dc[K@b = Building.in_cbd.avail_for_sip?[35Dc[K@b = Building.in_cbd.avail_for_sip?[K
+=> [#<Building id: 3, name: "255 Elizabeth Street", short_name: "255E", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: true, created_at: "2009-11-03 11:44:10", updated_at: "2009-11-03 11:44:10", floors_count: 2>, #<Building id: 12, name: "55 Market Street", short_name: "55M", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: true, created_at: "2009-11-03 12:55:24", updated_at: "2009-11-03 12:55:24", floors_count: 7>, #<Building id: 15, name: "316 George Street", short_name: "316G", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: true, created_at: "2009-11-03 12:56:46", updated_at: "2009-11-03 12:56:46", floors_count: 5>]
+>> @b = Building.in_cbd.avail_for_sip.capcit[K[Kacity
+NoMethodError: undefined method `capcacity' for #<Class:0x1034444f0>
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:1959:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `send'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2143:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:174:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `send'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2143:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:174:in `method_missing'
+	from (irb):23
+	from :0>> @b = Building.in_cbd.avail_for_sip.capcacity[K[K[K[K[K[Kacot[K[Kityu[K
+NoMethodError: undefined method `capacity' for #<Class:0x1034444f0>
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:1959:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `send'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2143:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:174:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `send'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2143:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:174:in `method_missing'
+	from (irb):24
+	from :0>> @b = Building.in_cbd.avail_for_sip.capacity[K[K[K[K[K[K[K[Kcollev[Kc[K[K[K[K[K[Kf;ppr[K[K[K[K[Kcapaco[Kity
+NoMethodError: undefined method `capacity' for #<Class:0x1034444f0>
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:1959:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `send'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2143:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:174:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `send'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2143:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:174:in `method_missing'
+	from (irb):25
+	from :0>> @b = Building.in_cbd.avail_for_sip.capacity[K[K[K[K[K[K[K[K[K
+=> [#<Building id: 3, name: "255 Elizabeth Street", short_name: "255E", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: true, created_at: "2009-11-03 11:44:10", updated_at: "2009-11-03 11:44:10", floors_count: 2>, #<Building id: 12, name: "55 Market Street", short_name: "55M", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: true, created_at: "2009-11-03 12:55:24", updated_at: "2009-11-03 12:55:24", floors_count: 7>, #<Building id: 15, name: "316 George Street", short_name: "316G", state: "NSW", suburb: "Sydney", building_zone: "CBD", available_for_sip: true, created_at: "2009-11-03 12:56:46", updated_at: "2009-11-03 12:56:46", floors_count: 5>]
+>> @b.capacity
+NoMethodError: undefined method `capacity' for #<Class:0x1034444f0>
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:1959:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `send'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2143:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:174:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `send'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:181:in `method_missing'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/base.rb:2143:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `__send__'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:113:in `with_scope'
+	from /Library/Ruby/Gems/1.8/gems/activerecord-2.3.4/lib/active_record/named_scope.rb:174:in `method_missing'
+	from (irb):27
+	from :0>> clear
+NameError: undefined local variable or method `clear' for #<Object:0x100177298>
+	from (irb):28
+	from :0
+>> exit
+[geth] ~/development/rails/pipeline$ d[Kgit status
+# On branch add_comments
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   app/controllers/buildings_controller.rb
+#	modified:   app/controllers/welcome_controller.rb
+#	modified:   app/helpers/application_helper.rb
+#	modified:   app/models/building.rb
+#	modified:   app/views/buildings/show.html.erb
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	app/views/welcome/csvtest.html.erb
+#	console
+#	db/floors.csv
+no changes added to commit (use "git add" and/or "git commit -a")
+[geth] ~/development/rails/pipeline$ git pus[K[K[Kcommit -a
+7[?47h[?1h=[1;24r[m[H[2J[24;1H".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 22L, 686C[>c[2;1H# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: Gethryn Ghavalas <geth@gethimac.local>
+#
+# On branch add_comments
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   app/controllers/buildings_controller.rb
+#       modified:   app/controllers/welcome_controller.rb
+#       modified:   app/helpers/application_helper.rb
+#       modified:   app/models/building.rb
+#       modified:   app/views/buildings/show.html.erb
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       app/views/welcome/csvtest.html.erb
+#       console
+#       db/floors.csv
+[1m[34m~                                                                               [1;1H[m[24;1H[1m-- INSERT --[m[24;13H[K[1;1HNNaammeed  RRoouuttees  GGaalloorre[24;1H[K[1;19H[24;1H:x".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 22L, 705C written
+[?1l>[2J[?47l8[add_comments c2196bf] Named Routes Galore
+ 5 files changed, 31 insertions(+), 15 deletions(-)
+[geth] ~/development/rails/pipeline$ git push origin add_comment
+error: src refspec add_comment does not match any.
+error: failed to push some refs to 'git@github.com:gethryn/Pipeline.git'
+[geth] ~/development/rails/pipeline$ git push origin add_comment[K[K[K[K[K[K[K[K[K[K[K[K
+Counting objects: 25, done.
+Delta compression using up to 2 threads.
+Compressing objects:   7% (1/13)   Compressing objects:  15% (2/13)   Compressing objects:  23% (3/13)   Compressing objects:  30% (4/13)   Compressing objects:  38% (5/13)   Compressing objects:  46% (6/13)   Compressing objects:  53% (7/13)   Compressing objects:  61% (8/13)   Compressing objects:  69% (9/13)   Compressing objects:  76% (10/13)   Compressing objects:  84% (11/13)   Compressing objects:  92% (12/13)   Compressing objects: 100% (13/13)   Compressing objects: 100% (13/13), done.
+Writing objects:   7% (1/13)   Writing objects:  15% (2/13)   Writing objects:  23% (3/13)   Writing objects:  30% (4/13)   Writing objects:  38% (5/13)   Writing objects:  46% (6/13)   Writing objects:  53% (7/13)   Writing objects:  61% (8/13)   Writing objects:  69% (9/13)   Writing objects:  76% (10/13)   Writing objects:  84% (11/13)   Writing objects:  92% (12/13)   Writing objects: 100% (13/13)   Writing objects: 100% (13/13), 1.70 KiB, done.
+Total 13 (delta 9), reused 0 (delta 0)
+To git@github.com:gethryn/Pipeline.git
+   edc62bb..c2196bf  add_comments -> add_comments
+ ! [rejected]        master -> master (non-fast forward)
+error: failed to push some refs to 'git@github.com:gethryn/Pipeline.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes before pushing again.  See the 'non-fast forward'
+section of 'git push --help' for details.
+[geth] ~/development/rails/pipeline$ 
+[geth] ~/development/rails/pipeline$ 

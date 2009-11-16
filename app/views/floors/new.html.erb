@@ -1,28 +1,16 @@
 <%= render :partial => "sidebar" %>
 <h1>New floor</h1>
 
-<% form_for([@floor.building, @floor]) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :building_id %><br />
-    <%= f.collection_select :building_id, @buildings, :id, :short_name %>
-  </p>
-  <p>
-    <%= f.label :floor_level %><br />
-    <%= f.text_field :floor_level %>
-  </p>
-	<p>
-		<%= f.label :capacity %><br />
-		<%= f.text_field :capacity %>
-	</p>
-  <p>
-    <%= f.label :active %><br />
-    <%= f.check_box :active %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
+<p>
+<% semantic_form_for [@floor.building, @floor] do |f| %>
+	<% f.inputs do %>
+		<%=f.input :building, :include_blank => false %>
+		<%=f.input :floor_level %>
+		<%=f.input :active, :as => :radio %>
+		<%=f.input :capacity %>
+	<% end %>
+	<%= f.buttons %>
 <% end %>
+</p>
 
 <%= link_to 'Back', building_floors_path(@floor.building) %>

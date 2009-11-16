@@ -3,7 +3,7 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities.xml
   def index
     @opportunities = Opportunity.all
-    @statuses = StaticItem.find(:all, :conditions => { :list_name => 'OpportunityStatus'})
+    @statuses = APP_CONFIG['OpportunityStatus'].keys || StaticItem.find(:all, :conditions => { :list_name => 'OpportunityStatus'})
 
     respond_to do |format|
       format.html # index.html.erb
@@ -26,9 +26,6 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities/new.xml
   def new
     @opportunity = Opportunity.new
-    @business_units = StaticItem.find(:all, :conditions => {:list_name => 'BusinessUnit'})
-    @move_types = StaticItem.find(:all, :conditions => {:list_name => 'MoveType'})
-    @opportunity_statuses = StaticItem.find(:all, :conditions => {:list_name => 'OpportunityStatus'})
     @floors = Floor.find(:all)
 
     respond_to do |format|
@@ -40,9 +37,6 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities/1/edit
   def edit
     @opportunity = Opportunity.find(params[:id])
-    @business_units = StaticItem.find(:all, :conditions => {:list_name => 'BusinessUnit'})
-    @move_types = StaticItem.find(:all, :conditions => {:list_name => 'MoveType'})
-    @opportunity_statuses = StaticItem.find(:all, :conditions => {:list_name => 'OpportunityStatus'})
     @floors = Floor.find(:all)
   end
 

@@ -1,37 +1,7 @@
 <%= render :partial => "sidebar" %>
 
 <h1>New building</h1>
-
-<% form_for(@building) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :short_name %><br />
-    <%= f.text_field :short_name %>
-  </p>
-  <p>
-    <%= f.label :state %><br />
-    <%= f.collection_select :state, @states, :list_item, :list_item %>
-  </p>
-  <p>
-    <%= f.label :suburb %><br />
-    <%= f.text_field :suburb %>
-  </p>
-	<p>
-    <%= f.label :building_zone %><br />
-    <%= f.collection_select :building_zone, @zones, :list_item, :list_item %>
-  </p>
-  <p>
-    <%= f.label :available_for_sip %><br />
-    <%= f.check_box :available_for_sip %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
+<p>
+<%= render :partial => "building_form" %>
 
 <%= link_to 'Back', buildings_path %>
