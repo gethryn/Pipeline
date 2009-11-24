@@ -26,7 +26,7 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities/new.xml
   def new
     @opportunity = Opportunity.new
-    @floors = Floor.find(:all)
+    @floors = Floor.find(:all, :include => :building, :order => "buildings.name, floors.floor_Level")
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,7 +37,7 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities/1/edit
   def edit
     @opportunity = Opportunity.find(params[:id])
-    @floors = Floor.find(:all)
+    @floors = Floor.find(:all, :include => :building, :order => "buildings.name, floors.floor_Level")
   end
 
   # POST /opportunities

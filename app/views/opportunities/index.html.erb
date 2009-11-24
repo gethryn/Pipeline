@@ -29,9 +29,9 @@
 	    <td width="30px"><%=h opportunity.business_unit %></td>
 	    <td width="230px"><%=h opportunity.team %></td>
 			<td width="100px"><%=h opportunity.est_date %>
-	    <td width="100px"><%=h opportunity.building_short_name_with_floor %></td>
+	    <td width="100px"><%=h get_building_short_name_with_floor(opportunity.floor_id) %></td>
 			<td width="30px" align="center"><%=h opportunity.num_seats_departing %></td>
-			<td width="100px"><%=h opportunity.to_building_short_name_with_floor %></td>
+			<td width="100px"><%=h get_building_short_name_with_floor(opportunity.floor_id_arriving) %></td>
 			<td width="30px" align="center"><%=h opportunity.num_seats_arriving %></td>
 	    <td><%= link_to image_tag(get_yaml_item('StandardIcon','Show'), :border=>0), opportunity %></td>
 	    <td><%= link_to image_tag(get_yaml_item('StandardIcon','Edit'), :border=>0), edit_opportunity_path(opportunity) %></td>
@@ -52,4 +52,4 @@
 
 <br />
 
-<%= link_to 'New opportunity', new_building_opportunity_path(params[:building_id]) %>
+<%= link_to 'New opportunity', new_building_opportunity_path(params[:building_id] || 1) %>

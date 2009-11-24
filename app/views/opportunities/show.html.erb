@@ -18,12 +18,12 @@
 <table>
 	<tr>
 		<td width="100px"><strong>Departing</strong></td>
-		<td width="300px"><%=h @opportunity.building_short_name_with_floor %></td>
+		<td width="300px"><%=h get_building_short_name_with_floor(@opportunity.floor) %></td>
 		<td width="100px"><%=h @opportunity.num_seats_departing %> seats</td>
 	</tr>
 	<tr>
 		<td><strong>Arriving</strong></td>
-		<td><%=h @opportunity.to_building_short_name_with_floor %></td>
+		<td><%=h get_building_short_name_with_floor(@opportunity.floor_id_arriving) %></td>
 		<td><%=h @opportunity.num_seats_arriving %> 
 			<% 	if @opportunity.num_seats_arriving.nil? != true %>
 						seats

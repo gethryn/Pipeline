@@ -6,14 +6,6 @@ class Opportunity < ActiveRecord::Base
   
   validates_numericality_of :num_seats_departing, :num_seats_arriving, :allow_nil => true
   
-  def building_short_name_with_floor
-    Floor.find(floor_id).building_short_name_with_floor
-  end
-  
-  def to_building_short_name_with_floor
-    Floor.find(floor_id_arriving).building_short_name_with_floor
-  end
-  
   def size_change?
     if ((self.num_seats_arriving.nil? == false) && (self.num_seats_departing != self.num_seats_arriving))
       return true

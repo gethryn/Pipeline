@@ -12,4 +12,7 @@ module ApplicationHelper
   def get_building_from_short_name(shortname)
     Building.find_by_short_name(shortname)
   end
+  def get_building_short_name_with_floor(floor)
+    Floor.find(floor).building_short_name_with_floor 
+  end
 end

@@ -24,8 +24,8 @@
 	<% else %>
 		<tr bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">
 	<% end %>
-    <td><%=h building.short_name %></td>
-    <td><%=h building.name %>&nbsp;[<%= link_to 'map', building.google_map_link %>]</td>
+    <td align="center"><%=h building.short_name %></td>
+    <td><%=h building.name %>&nbsp;<small>[<%= link_to 'map', building.google_map_link %>]</small></td>
     <td><%=h building.suburb %></td>
     <td><%=h building.state %></td>
 		<td align="center"><%=h building.building_zone %></td>

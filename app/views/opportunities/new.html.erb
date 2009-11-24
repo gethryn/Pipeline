@@ -5,8 +5,10 @@
 <% semantic_form_for [@building, @opportunity] do |f| %>
 	<% f.inputs do %>
 		<%=f.input :move_type, :as => :select, :collection => get_yaml_keys('MoveType') %>
-		<%=f.input :floor, :label => "From Floor", :label_method => :building_short_name_with_floor %>
+		<%=f.input :floor, :label => "From Floor", :collection => @floors, :label_method => :building_short_name_with_floor %>
+		<%=f.input :num_seats_departing %>
 		<%=f.input :floor_id_arriving, :as => :select, :label => "To Floor", :collection => @floors, :label_method => :building_short_name_with_floor %>
+		<%=f.input :num_seats_arriving %>
 		<%=f.input :business_unit, :as => :select, :collection => get_yaml_keys('BusinessUnit') %>
 		<%=f.input :team, :label => "Team Name or Cost Centre \#"%>
 		<%=f.input :est_date, :label => "Estimated Date", :include_blank => false %>
