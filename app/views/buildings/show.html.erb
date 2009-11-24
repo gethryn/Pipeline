@@ -2,11 +2,11 @@
 
 <p class="small"><strong>CBD:</strong> | 
 	<% @cbd.each do |bdg| %>
-		[<%= link_to bdg, Building.find_by_short_name(bdg) %>] | 
+		[<%= link_to bdg, get_building_from_short_name(bdg) %>] | 
 	<% end %>
 	<strong>&nbsp;&nbsp;&nbsp;METRO:</strong> | 
 	<% @metro.each do |bdg| %>
-		[<%= link_to bdg, Building.find_by_short_name(bdg) %>] | 
+		[<%= link_to bdg, get_building_from_short_name(bdg) %>] | 
 	<% end %>
 </p>
 

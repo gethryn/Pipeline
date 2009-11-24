@@ -1,45 +1,20 @@
 <%= render :partial => "sidebar" %>
 <h1>New opportunity</h1>
-
-<% @building = Building.find(params[:building_id]) %>
-
-<% form_for([@building, @opportunity]) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :move_type %> <img src="/images/bullet_red.png"/><br />
-    <%= f.collection_select :move_type, @move_types, :list_item, :list_item %>
-  </p>
-  <p>
-    <%= f.label 'From Floor and Seats' %> <img src="/images/bullet_red.png"/><br />
-    <%= f.collection_select :floor_id, @floors, :id, :building_short_name_with_floor %> <%= f.text_field :num_seats_departing, :size =>10 %>
-  </p>
-  <p>
-    <%= f.label 'To Floor and Seats' %> <img src="/images/bullet_red.png"/><br />
-    <%= f.collection_select :floor_id_arriving, @floors, :id, :building_short_name_with_floor %> <%= f.text_field :num_seats_arriving, :size => 10 %>
-  </p>
-  <p>
-    <%= f.label 'Business Unit & Team Name' %> <img src="/images/bullet_red.png"/><br />
-    <%= f.collection_select :business_unit, @business_units, :list_item, :list_item %> <%= f.text_field :team %>
-  </p>
-  <p>
-    <%= f.label :est_date %> <img src="/images/bullet_red.png"/><br />
-    <%= f.date_select :est_date %>
-  </p>
-  <p>
-    <%= f.label :notes %><br />
-    <%= f.text_area :notes, :size => '40x8' %>
-  </p>
-  <p>
-    <%= f.label :status %> <img src="/images/bullet_red.png"/><br />
-    <%= f.collection_select :status, @opportunity_statuses, :list_item, :list_item %> &nbsp;&nbsp;&nbsp;&nbsp;
-    <%= f.check_box :key_move %> <%= f.label :key_move %>&nbsp;&nbsp;&nbsp;&nbsp;
-    <%= f.check_box :applied %> <%= f.label :applied %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>&nbsp;&nbsp;&nbsp;&nbsp;or go
-		<%= link_to 'Back', buildings_path %> to the list
-  </p>
+<% @building = Building.find(:first, :conditions => "id = #{params[:building_id]}")%>
+<p>
+<% semantic_form_for [@building, @opportunity] do |f| %>
+	<% f.inputs do %>
+		<%=f.input :move_type, :as => :select, :collection => get_yaml_keys('MoveType') %>
+		<%=f.input :floor, :label => "From Floor", :label_method => :building_short_name_with_floor %>
+		<%=f.input :floor_id_arriving, :as => :select, :label => "To Floor", :collection => @floors, :label_method => :building_short_name_with_floor %>
+		<%=f.input :business_unit, :as => :select, :collection => get_yaml_keys('BusinessUnit') %>
+		<%=f.input :team, :label => "Team Name or Cost Centre \#"%>
+		<%=f.input :est_date, :label => "Estimated Date", :include_blank => false %>
+		<%=f.input :notes, :label => "Opportunity Details" %>
+		<%=f.input :status, :as => :select, :collection => get_yaml_keys('OpportunityStatus') %>
+		<%=f.input :key_move, :as => :radio, :hint => "Is this move critical to the NSW Restack Project?" %>
+		<%=f.input :applied, :as => :radio, :hint => "Select \'Yes\' once the item has been added to the Programme." %>
+	<% end %>
+	<%= f.buttons %>
 <% end %>
-
-<!-- , {},{:multiple => true} -->
+</p>
