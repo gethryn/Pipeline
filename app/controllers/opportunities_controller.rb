@@ -29,7 +29,7 @@ class OpportunitiesController < ApplicationController
     @business_units = StaticItem.find(:all, :conditions => {:list_name => 'BusinessUnit'})
     @move_types = StaticItem.find(:all, :conditions => {:list_name => 'MoveType'})
     @opportunity_statuses = StaticItem.find(:all, :conditions => {:list_name => 'OpportunityStatus'})
-    @floors = Floor.find(:all)
+    @floors = Floor.find(:all).sort_by { |flr| [flr[:building_id], flr[:floor_level]]}
 
     respond_to do |format|
       format.html # new.html.erb
@@ -69,8 +69,8 @@ class OpportunitiesController < ApplicationController
   # PUT /opportunities/1.xml
   def update
     @opportunity = Opportunity.find(params[:id])
-    @floor = Floor.find(params[:floor_id])
-    @building = Building.find(@floor.building)
+    @floor = @opportunity.floor
+    @building = @floor.building
 
     respond_to do |format|
       if @opportunity.update_attributes(params[:opportunity])
