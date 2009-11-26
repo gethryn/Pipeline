@@ -1,14 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
-
+  map.login "login", :controller => "user_sessions", :action => "new"
+  map.logout "logout", :controller => "user_sessions", :action => "destroy"
+  map.resources :user_sessions
+  map.resources :users
   map.resources :static_items
+
   map.resources :buildings, :shallow => true do |buildings|
     buildings.resources :floors do |floors|
       floors.resources :opportunities
     end
     buildings.resources :opportunities
   end
-  
-  map.resources :building_occupancies
   
   map.root :controller => "welcome"
 

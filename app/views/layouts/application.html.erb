@@ -19,6 +19,15 @@ Released   : 20090918
 	<%= javascript_include_tag :all %> <!-- For example -->
 </head>
 <body>
+<div id="user_nav">
+	<% if current_user %>
+		<%= link_to "Edit Profile", edit_user_path(:current) %> | 
+		<%= link_to "Logout", logout_path %>
+	<% else %>
+		<%= link_to "Register", new_user_path %> | 
+		<%= link_to "Login", login_path %>
+	<% end %>
+</div>
 <div id="wrapper">
 	<div id="header">
 		<div id="logo">
