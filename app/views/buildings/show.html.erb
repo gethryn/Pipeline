@@ -12,7 +12,9 @@
 
 <h2>
   [<%=h @building.short_name %>] <%=h @building.name %>, <%=h @building.suburb %> <%=h @building.state %> 
-	<%= link_to image_tag(get_yaml_item('StandardIcon','Edit'), :border=>0), edit_building_path(@building) %>
+	<% if permitted_to? :edit, @building %>
+		<%= link_to image_tag(get_yaml_item('StandardIcon','Edit'), :border=>0), edit_building_path(@building) %>
+	<% end %>
 </h2>
 <p>
 <table cellpadding=4>
@@ -33,8 +35,11 @@
 		<td><%=h @building.capacity %></td>
 	</tr>	
 	<tr>
-		<td bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">Floors 
-			<%= link_to image_tag(get_yaml_item('StandardIcon','Edit'), :border=>0), building_floors_path(@building) %></td>
+		<td bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">Floors
+			<% if permitted_to? :edit, @floors %> 
+			<%= link_to image_tag(get_yaml_item('StandardIcon','Edit'), :border=>0), building_floors_path(@building) %>
+			<% end %>
+			</td>
 		<td>
 			<% @building.floors.sort_by {|flr| flr[:floor_level]}.each do |floor| %>
 				<%= link_to floor.floor_level, floor_path(floor) %> 

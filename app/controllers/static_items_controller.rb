@@ -1,4 +1,7 @@
 class StaticItemsController < ApplicationController
+  
+  filter_resource_access
+  
   # GET /static_items
   # GET /static_items.xml
   def index

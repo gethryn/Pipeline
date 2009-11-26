@@ -19,6 +19,7 @@
   <%=h @floor.active %>
 </p>
 
-
-<%= link_to 'Edit', edit_floor_path(@floor) %> |
+<% if permitted_to? :edit, @floor %>
+	<%= link_to 'Edit', edit_floor_path(@floor) %> |
+<% end %>
 <%= link_to 'Back', building_floors_path(@floor.building) %>

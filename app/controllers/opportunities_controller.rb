@@ -1,4 +1,7 @@
 class OpportunitiesController < ApplicationController
+  
+  filter_resource_access
+  
   # GET /opportunities
   # GET /opportunities.xml
   def index
@@ -14,7 +17,7 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities/1
   # GET /opportunities/1.xml
   def show
-    @opportunity = Opportunity.find(params[:id])
+    #@opportunity = Opportunity.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,7 +28,7 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities/new
   # GET /opportunities/new.xml
   def new
-    @opportunity = Opportunity.new
+    #@opportunity = Opportunity.new
     @floors = Floor.find(:all, :include => :building, :order => "buildings.name, floors.floor_Level")
 
     respond_to do |format|
@@ -36,14 +39,14 @@ class OpportunitiesController < ApplicationController
 
   # GET /opportunities/1/edit
   def edit
-    @opportunity = Opportunity.find(params[:id])
+    #@opportunity = Opportunity.find(params[:id])
     @floors = Floor.find(:all, :include => :building, :order => "buildings.name, floors.floor_Level")
   end
 
   # POST /opportunities
   # POST /opportunities.xml
   def create
-    @opportunity = Opportunity.new(params[:opportunity])
+    #@opportunity = Opportunity.new(params[:opportunity])
     @building = Building.find(params[:building_id])
     
     respond_to do |format|
@@ -62,7 +65,7 @@ class OpportunitiesController < ApplicationController
   # PUT /opportunities/1
   # PUT /opportunities/1.xml
   def update
-    @opportunity = Opportunity.find(params[:id])
+    #@opportunity = Opportunity.find(params[:id])
     @floor = @opportunity.floor
     @building = @floor.building
 
@@ -82,7 +85,7 @@ class OpportunitiesController < ApplicationController
   # DELETE /opportunities/1
   # DELETE /opportunities/1.xml
   def destroy
-    @opportunity = Opportunity.find(params[:id])
+    #@opportunity = Opportunity.find(params[:id])
     @building = @opportunity.floor.building
     @opportunity.destroy
 

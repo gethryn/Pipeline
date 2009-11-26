@@ -1,5 +1,6 @@
 class BuildingsController < ApplicationController
-
+  
+  filter_resource_access
   
   # GET /buildings
   # GET /buildings.xml
@@ -15,7 +16,7 @@ class BuildingsController < ApplicationController
   # GET /buildings/1
   # GET /buildings/1.xml
   def show
-    @building = Building.find(params[:id])
+    #@building = Building.find(params[:id])
     @cbd = Building.in_cbd.collect(&:short_name).sort
     @metro = Building.in_metro.collect(&:short_name).sort
 
@@ -28,7 +29,7 @@ class BuildingsController < ApplicationController
   # GET /buildings/new
   # GET /buildings/new.xml
   def new
-    @building = Building.new
+    #@building = Building.new
     #APP_CONFIG['BusinessUnit'].keys.each { |bu| @building.building_occupancies.build(:business_unit => bu, :capacity => 0) }
 
     respond_to do |format|
@@ -39,13 +40,13 @@ class BuildingsController < ApplicationController
 
   # GET /buildings/1/edit
   def edit
-    @building = Building.find(params[:id])
+    #@building = Building.find(params[:id])
   end
 
   # POST /buildings
   # POST /buildings.xml
   def create
-    @building = Building.new(params[:building])
+    #@building = Building.new(params[:building])
 
     respond_to do |format|
       if @building.save
@@ -62,7 +63,7 @@ class BuildingsController < ApplicationController
   # PUT /buildings/1
   # PUT /buildings/1.xml
   def update
-    @building = Building.find(params[:id])
+    #@building = Building.find(params[:id])
 
     respond_to do |format|
       if @building.update_attributes(params[:building])
@@ -79,7 +80,7 @@ class BuildingsController < ApplicationController
   # DELETE /buildings/1
   # DELETE /buildings/1.xml
   def destroy
-    @building = Building.find(params[:id])
+    #@building = Building.find(params[:id])
     @building.destroy
 
     respond_to do |format|

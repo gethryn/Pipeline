@@ -1,4 +1,7 @@
 class FloorsController < ApplicationController
+  
+  filter_resource_access
+  
   # GET /floors
   # GET /floors.xml
   def index
@@ -43,14 +46,14 @@ class FloorsController < ApplicationController
 
   # GET /floors/1/edit
   def edit
-    @floor = Floor.find(params[:id])
+    #@floor = Floor.find(params[:id])
     @buildings = Building.find(:all)
   end
 
   # POST /floors
   # POST /floors.xml
   def create
-    @floor = Floor.new(params[:floor])
+    #@floor = Floor.new(params[:floor])
 
     respond_to do |format|
       if @floor.save
@@ -67,7 +70,7 @@ class FloorsController < ApplicationController
   # PUT /floors/1
   # PUT /floors/1.xml
   def update
-    @floor = Floor.find(params[:id])
+    #@floor = Floor.find(params[:id])
 
     respond_to do |format|
       if @floor.update_attributes(params[:floor])
@@ -84,7 +87,7 @@ class FloorsController < ApplicationController
   # DELETE /floors/1
   # DELETE /floors/1.xml
   def destroy
-    @floor = Floor.find(params[:id])
+    #@floor = Floor.find(params[:id])
     @building = @floor.building
     @floor.destroy
 

@@ -39,8 +39,20 @@
 		<td align="center"><%= link_to "#{building.floors_count}", building_floors_path(building) %></td>
 		<td align="center"><%= building.capacity %></td>
     <td><%= link_to image_tag(get_yaml_item('StandardIcon','Show'), :border=>0), building %></td>
-    <td><%= link_to image_tag(get_yaml_item('StandardIcon','Edit'), :border=>0), edit_building_path(building) %></td>
-    <td><%= link_to image_tag(get_yaml_item('StandardIcon','Destroy'), :border=>0), building, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td>
+			<% if permitted_to? :edit, @building %>
+				<%= link_to image_tag(get_yaml_item('StandardIcon','Edit'), :border=>0), edit_building_path(building) %>
+			<% else %>
+				&nbsp;
+			<% end %>
+		</td>
+    <td>
+		<% if permitted_to? :destroy, @building %>
+			<%= link_to image_tag(get_yaml_item('StandardIcon','Destroy'), :border=>0), building, :confirm => 'Are you sure?', :method => :delete %>
+			<% else %>
+				&nbsp;
+			<% end %>
+		</td>
   </tr>
 <% mycount += 1 %>
 <% end %>
