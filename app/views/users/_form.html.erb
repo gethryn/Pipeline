@@ -17,6 +17,10 @@
     <%= f.password_field :password_confirmation %>
   </p>
   <p>
+    <%= f.label :time_zone %><br />
+    <%= f.time_zone_select :time_zone, /Australia/ %>
+  </p>
+  <p>
     <%= f.label :roles %><br />
 		<% for role in User::ROLES %>
 			<%= check_box_tag "user[roles][]", role, @user.roles.include?(role) %>

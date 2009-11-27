@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
   
   before_filter { |c| Authorization.current_user = c.current_user }
+  before_filter :set_user_time_zone
 
   helper_method :current_user
   
@@ -28,6 +29,13 @@ class ApplicationController < ActionController::Base
   
   def permission_denied
     flash[:error] = "Sorry, you are not authorized to view that page"
-    redirect_to buildings_path
+    redirect_to root_url
   end
+  
+  private
+  
+  def set_user_time_zone
+    Time.zone = current_user.time_zone ||= "Sydney"
+  end
+  
 end
