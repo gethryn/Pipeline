@@ -1,0 +1,16 @@
+<% semantic_form_for @opportunity_item do |f| %>
+	<% f.inputs do %>
+	<%=f.input :opportunity, :include_blank => false %>
+	<%=f.input 	:from_floor_id, :label => "From Floor", 
+							:collection => @floors, :label_method => :building_short_name_with_floor %>
+	<%=f.input :from_floor_seats %>
+	<%=f.input 	:to_floor_id, :label => "To Floor", 
+							:collection => @floors, :label_method => :building_short_name_with_floor %>
+	<%=f.input :to_floor_seats %>
+	<%=f.input :cost_centre %>
+	<%=f.input :team_name %>
+	<%=f.input :contact_name %>
+	<%=f.input :notes %>
+	<% end %>
+	<%=f.buttons %>
+<% end %>

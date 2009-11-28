@@ -1,0 +1,21 @@
+one:
+  opportunity_id: 1
+  from_floor_id: 1
+  from_floor_seats: 1
+  to_floor_id: 1
+  to_floor_sears: 1
+  cost_centre: MyString
+  team_name: MyString
+  contact_name: MyString
+  notes: MyText
+
+two:
+  opportunity_id: 1
+  from_floor_id: 1
+  from_floor_seats: 1
+  to_floor_id: 1
+  to_floor_sears: 1
+  cost_centre: MyString
+  team_name: MyString
+  contact_name: MyString
+  notes: MyText

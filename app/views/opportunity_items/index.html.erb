@@ -1,0 +1,32 @@
+<% title "Opportunity Items" %>
+
+<table>
+  <tr>
+    <th>Opportunity</th>
+    <th>From Floor</th>
+    <th>From Floor Seats</th>
+    <th>To Floor</th>
+    <th>To Floor Seats</th>
+    <th>Cost Centre</th>
+    <th>Team Name</th>
+    <th>Contact Name</th>
+    <th>Notes</th>
+  </tr>
+  <% for opportunity_item in @opportunity_items %>
+    <tr>
+      <td><%=h opportunity_item.opportunity_id %></td>
+      <td><%=h opportunity_item.from_floor_id %></td>
+      <td><%=h opportunity_item.from_floor_seats %></td>
+      <td><%=h opportunity_item.to_floor_id %></td>
+      <td><%=h opportunity_item.to_floor_seats %></td>
+      <td><%=h opportunity_item.cost_centre %></td>
+      <td><%=h opportunity_item.team_name %></td>
+      <td><%=h opportunity_item.contact_name %></td>
+      <td><%=h opportunity_item.notes %></td>
+      <td><%= link_to "Edit", edit_opportunity_item_path(opportunity_item) %></td>
+      <td><%= link_to "Destroy", opportunity_item, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Opportunity Item", new_opportunity_item_path %></p>
