@@ -1,40 +1,47 @@
 <%= render :partial => "sidebar" %>
+<h2><%=h @opportunity.name || "" %></h2>
 <p>
-  <strong><img src="<%=h get_yaml_item('MoveType',@opportunity.move_type) %>"/>&nbsp;<%=h @opportunity.move_type %></strong> opportunity for 
-	<strong><%=h @opportunity.team %> [<%=h @opportunity.business_unit %>]</strong>.
-</p>
-<p> 
-	<strong><img src="<%=h get_yaml_item('OpportunityStatus', @opportunity.status) %>"/>&nbsp;<%=h @opportunity.status %></strong> status.
-</p>
-<p>
-	Estimated Date for Delivery: <%=h @opportunity.est_date %> 
+  <strong><img src="<%=h get_yaml_item('MoveType',@opportunity.move_type) %>"/>&nbsp;<%=h @opportunity.move_type %></strong> opportunity in <strong><img src="<%=h get_yaml_item('OpportunityStatus', @opportunity.status) %>"/>&nbsp;<%=h @opportunity.status %></strong> status. <em>Estimated Date for Delivery: <%=h @opportunity.est_date %> 
 	<% if @opportunity.est_date < Time.now.to_date %>
 		(<%=h distance_of_time_in_words_to_now(@opportunity.est_date)%> ago)
 	<% else %>
 		(in <%=h distance_of_time_in_words_to_now(@opportunity.est_date)%>)
 	<% end %>
-</p>
-<p>
+</em></p>
+<h3>Opportunity Details</h3>
 <table>
-	<tr>
-		<td width="100px"><strong>Departing</strong></td>
-		<td width="300px"><%=h get_building_short_name_with_floor(@opportunity.floor) %></td>
-		<td width="100px"><%=h @opportunity.num_seats_departing %> seats</td>
+	<tr bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">
+		<th width="100px">From</th>
+		<th width="50px"><%= image_tag(get_yaml_item('StandardIcon','Person'), :border=>0) %></th>
+		<th width="100px">To</th>
+		<th width="50px"><%= image_tag(get_yaml_item('StandardIcon','Person'), :border=>0) %></th>
+		<th width="150px">Team</th>
+		<th width="150px">Contact</th>
+		<th width="300px">Notes</th>
+		<th>&nbsp;</th>
+		<th>&nbsp;</th>
 	</tr>
-	<tr>
-		<td><strong>Arriving</strong></td>
-		<td><%=h get_building_short_name_with_floor(@opportunity.floor_id_arriving) %></td>
-		<td><%=h @opportunity.num_seats_arriving %> 
-			<% 	if @opportunity.num_seats_arriving.nil? != true %>
-						seats
-			<%  end
-			 		if @opportunity.size_change? %>
-						<img src="/images/building_error.png"/>
-			<%	end %>
-		</td>
+	<% mycount = 1 %>
+	<% for opp_item in @opportunity.opportunity_items %>
+	<% if mycount % 2 == 0 %>
+		<tr bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">
+	<% else %>
+		<tr>
+	<% end %>
+		<td align="center"><%= Floor.find(opp_item.from_floor_id).building_short_name_with_floor %></td>
+		<td align="center"><%= opp_item.from_floor_seats%></td>
+		<td align="center"><%= Floor.find(opp_item.from_floor_id).building_short_name_with_floor %></td>
+		<td align="center"><%= opp_item.to_floor_seats%></td>
+		<td>[<%= opp_item.cost_centre -%>]: <%= opp_item.team_name %></td>
+		<td><%= opp_item.contact_name %></td>
+		<td><%= opp_item.notes %>&nbsp;</td>
+		<td><%= link_to image_tag(get_yaml_item('StandardIcon','Edit'), :border=>0), edit_opportunity_item_path(opp_item) %></td>
+    <td><%= link_to image_tag(get_yaml_item('StandardIcon','Destroy'), :border=>0), opp_item, :confirm => 'Are you sure?', :method => :delete %></td>
 	</tr>
+	<% mycount += 1 %>
+	<% end %>
 </table>
-</p>	
+<p><%= link_to "New Opportunity Item", new_opportunity_item_path %></p>
 <p>
   <b>Notes:</b>
   <%=h @opportunity.notes %>
@@ -48,7 +55,7 @@
 	Created <%=h @opportunity.created_at.in_time_zone %> (<%=h time_ago_in_words(@opportunity.created_at) %> ago)<br />
 	Updated <%=h @opportunity.updated_at.in_time_zone %> (<%=h time_ago_in_words(@opportunity.updated_at) %> ago)
 </p>
-
-
+<p>
 <%= link_to 'Edit', edit_opportunity_path(@opportunity) %> |
 <%= link_to 'Back', building_path(@opportunity.floor.building) %>
+</p>
