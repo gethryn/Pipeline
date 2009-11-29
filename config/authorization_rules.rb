@@ -6,6 +6,7 @@ authorization do
   end
   
   role :guest do
+    includes :admin
     has_permission_on [:welcome], :to => [:index]
   end
   
