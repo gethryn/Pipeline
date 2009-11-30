@@ -51,5 +51,5 @@
 </p>
 <p>
 <%= link_to 'Edit', edit_opportunity_path(@opportunity) %> |
-<%= link_to 'Back', building_path(@opportunity.floor.building) %>
+<%= link_to 'Back', :back rescue buildings_path %>
 </p>

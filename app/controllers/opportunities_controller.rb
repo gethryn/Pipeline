@@ -5,7 +5,7 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities
   # GET /opportunities.xml
   def index
-    @opportunities = Opportunity.paginate :per_page => params[:per_page] || 5, :page => params[:page] || 1, :order => :created_at
+    @opportunities = Opportunity.paginate :per_page => params[:per_page] || 25, :page => params[:page] || 1, :order => :created_at
     @statuses = APP_CONFIG['OpportunityStatus'].keys || StaticItem.find(:all, :conditions => { :list_name => 'OpportunityStatus'})
 
     respond_to do |format|
@@ -30,6 +30,7 @@ class OpportunitiesController < ApplicationController
   def new
     #@opportunity = Opportunity.new
     @floors = Floor.find(:all, :include => :building, :order => "buildings.name, floors.floor_Level")
+    @account_managers = User.with_role(:account_manager)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -47,7 +48,7 @@ class OpportunitiesController < ApplicationController
   # POST /opportunities.xml
   def create
     #@opportunity = Opportunity.new(params[:opportunity])
-    @building = Building.find(params[:building_id])
+   #@building = Building.find(params[:building_id])
     
     respond_to do |format|
       if @opportunity.save
@@ -66,8 +67,8 @@ class OpportunitiesController < ApplicationController
   # PUT /opportunities/1.xml
   def update
     #@opportunity = Opportunity.find(params[:id])
-    @floor = @opportunity.floor
-    @building = @floor.building
+    #@floor = @opportunity.floor
+    #@building = @floor.building
 
     respond_to do |format|
       if @opportunity.update_attributes(params[:opportunity])
@@ -86,12 +87,12 @@ class OpportunitiesController < ApplicationController
   # DELETE /opportunities/1.xml
   def destroy
     #@opportunity = Opportunity.find(params[:id])
-    @building = @opportunity.floor.building
+    #@building = @opportunity.floor.building
     @opportunity.destroy
 
     respond_to do |format|
       flash[:notice] = 'Opportunity was deleted.'
-      format.html { redirect_to(building_path(@building)) }
+      format.html { redirect_to(opportunities_path) }
       format.xml  { head :ok }
     end
   end

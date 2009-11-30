@@ -24,7 +24,7 @@
 	</tr>
 	<tr>
 		<td bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">Opportunities</td>
-		<td><%=h @building.opportunity_count %></td>
+		<td><%=h @building.related_opportunities.count %></td>
 	</tr>
 	<tr>
 		<td bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">Avail for SIP?</td>
@@ -63,7 +63,7 @@
 		<th>&nbsp;</th>
 		<th>&nbsp;</th>
   </tr>
-	<% @building.opportunities.sort_by {|opp| [opp[:status],opp[:move_type]]}.each do |opportunity| %>
+	<% @building.related_opportunities.sort_by {|opp| [opp[:status],opp[:move_type]]}.each do |opportunity| %>
 		<tr bgcolor="<%= cycle "#FFFFFF", get_yaml_item('StandardColour','TableRow') %>">
 		<td><img src="<%=h get_yaml_item('OpportunityStatus',opportunity.status) %>"/>&nbsp;<img src="<%=h get_yaml_item('MoveType',opportunity.move_type) %>"/>
 			<td bgcolor="<%=h get_yaml_item('BusinessUnit',opportunity.business_unit) %>">&nbsp;</td>
@@ -85,5 +85,5 @@
 
 	<br />
 
-	<%= link_to 'New opportunity', new_building_opportunity_path(@building) %> | 
+	<%= link_to 'New opportunity', new_opportunity_path %> | 
   <%= link_to 'Back', buildings_path %>

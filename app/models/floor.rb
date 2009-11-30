@@ -1,7 +1,7 @@
 class Floor < ActiveRecord::Base
   
   belongs_to :building , :counter_cache => true
-  has_many :opportunities
+  #has_many :opportunities
   has_many :exit_opportunity_items, :class_name => "OpportunityItem", :foreign_key => "from_floor_id"
   has_many :entry_opportunity_items, :class_name => "OpportunityItem", :foreign_key => "to_floor_id"
   

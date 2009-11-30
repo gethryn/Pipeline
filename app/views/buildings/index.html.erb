@@ -35,7 +35,7 @@
 				  <%= image_tag(get_yaml_item('StandardIcon','NoIcon')) %>
 				<% end %>
 		</td>
-		<td align="center"><%= link_to "#{building.opportunities.size}", building %></td>
+		<td align="center"><%= link_to "#{building.related_opportunities.count}", building %></td>
 		<td align="center"><%= link_to "#{building.floors_count}", building_floors_path(building) %></td>
 		<td align="center"><%= building.capacity %></td>
     <td><%= link_to image_tag(get_yaml_item('StandardIcon','Show'), :border=>0), building %></td>

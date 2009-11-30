@@ -6,13 +6,18 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :static_items
 
+  #map.resources :buildings, :shallow => true do |buildings|
+  #  buildings.resources :floors do |floors|
+  #    floors.resources :opportunities
+  #  end
+  #  buildings.resources :opportunities
+  #end
+  
   map.resources :buildings, :shallow => true do |buildings|
-    buildings.resources :floors do |floors|
-      floors.resources :opportunities
-    end
-    buildings.resources :opportunities
+    buildings.resources :floors
   end
   
+  map.resources :opportunities
   map.resources :opportunity_items
   
   map.root :controller => "welcome"

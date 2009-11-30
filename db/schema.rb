@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091127075102) do
+ActiveRecord::Schema.define(:version => 20091130141007) do
 
   create_table "building_occupancies", :force => true do |t|
     t.integer  "building_id"
@@ -59,9 +59,11 @@ ActiveRecord::Schema.define(:version => 20091127075102) do
     t.datetime "updated_at"
     t.date     "est_date"
     t.integer  "floor_id_arriving"
+    t.integer  "user_id"
   end
 
   add_index "opportunities", ["floor_id"], :name => "index_opportunities_on_floor_id"
+  add_index "opportunities", ["user_id"], :name => "index_opportunities_on_user_id"
 
   create_table "opportunity_items", :force => true do |t|
     t.integer  "opportunity_id"

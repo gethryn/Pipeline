@@ -1,10 +1,13 @@
 class Opportunity < ActiveRecord::Base
   
-  belongs_to :floor, :counter_cache => true
+  #belongs_to :floor, :counter_cache => true
   has_many :opportunity_items
+  belongs_to :user
   
-  validates_presence_of :business_unit, :move_type, :status, :team, :est_date
-  validates_numericality_of :num_seats_departing, :num_seats_arriving, :allow_nil => true
+  validates_presence_of :business_unit, :move_type, :status, :team, :est_date, :user
+  
+  named_scope :in_status, lambda { |status| {:conditions => "status = '#{status}'"} }
+  named_scope :for_business_unit, lambda { |bu| {:conditions => "business_unit = '#{bu}'"} }
   
   def size_change?
     if ((self.num_seats_arriving.nil? == false) && (self.num_seats_departing != self.num_seats_arriving))
@@ -18,6 +21,10 @@ class Opportunity < ActiveRecord::Base
   
   def affected_floors
     (opportunity_items.collect(&:from_floor) + opportunity_items.collect(&:to_floor)).uniq || []
+  end
+  
+  def affected_buildings
+    self.affected_floors.collect(&:building).uniq || []
   end
   
   def affected_seats_from
