@@ -55,36 +55,31 @@
 		<th>&nbsp;</th>
 		<th>BU</th>
     <th>Team</th>
-		<th><img src="<%=h get_yaml_item('StandardIcon','Date') %>"</th>
-    <th>From</th>
-		<th><img src="<%=h get_yaml_item('StandardIcon','Person') %>"</th>
-		<th>To</th>
-		<th><img src="<%=h get_yaml_item('StandardIcon','Person') %>"</th>
+		<th><%= image_tag(get_yaml_item('StandardIcon','Date'), :border=>0) %></th>
+		<th>Affected Floors</th>
+		<th><%= image_tag(get_yaml_item('StandardIcon','Person'), :border=>0) %> EXIT</th>
+		<th><%= image_tag(get_yaml_item('StandardIcon','Person'), :border=>0) %> ENTER</th>
 		<th>&nbsp;</th>
 		<th>&nbsp;</th>
 		<th>&nbsp;</th>
   </tr>
-	<% mycount = 0 %>
 	<% @building.opportunities.sort_by {|opp| [opp[:status],opp[:move_type]]}.each do |opportunity| %>
-	<% if mycount % 2 == 0 %>
-	  <tr>
-	<% else %>
-		<tr bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">
-	<% end %>
-			<td><img src="<%=h get_yaml_item('OpportunityStatus',opportunity.status) %>"/>&nbsp;<img src="<%=h get_yaml_item('MoveType',opportunity.move_type) %>"/>
+		<tr bgcolor="<%= cycle "#FFFFFF", get_yaml_item('StandardColour','TableRow') %>">
+		<td><img src="<%=h get_yaml_item('OpportunityStatus',opportunity.status) %>"/>&nbsp;<img src="<%=h get_yaml_item('MoveType',opportunity.move_type) %>"/>
 			<td bgcolor="<%=h get_yaml_item('BusinessUnit',opportunity.business_unit) %>">&nbsp;</td>
 	    <td width="30px"><%=h opportunity.business_unit %></td>
 	    <td width="230px"><%=h opportunity.team %></td>
-			<td width="100px"><%=h opportunity.est_date %>
-	    <td width="100px"><%=h get_building_short_name_with_floor(opportunity.floor_id) %></td>
-			<td width="30px" align="center"><%=h opportunity.num_seats_departing %></td>
-			<td width="100px"><%=h get_building_short_name_with_floor(opportunity.floor_id_arriving) %></td>
-			<td width="30px" align="center"><%=h opportunity.num_seats_arriving %></td>
+			<td width="100px"><%=h opportunity.est_date %></td>
+	    <td width="250px">
+				<% for flr in opportunity.affected_floors %> 
+					<%=h flr.building_short_name_with_floor + '; ' -%>
+				<% end %>
+			<td width="50px"><%=h opportunity.affected_seats_from %></td>
+			<td width="50px"><%=h opportunity.affected_seats_to %></td>
 	    <td><%= link_to image_tag(get_yaml_item('StandardIcon','Show'), :border=>0), opportunity %></td>
 	    <td><%= link_to image_tag(get_yaml_item('StandardIcon','Edit'), :border=>0), edit_opportunity_path(opportunity) %></td>
 	    <td><%= link_to image_tag(get_yaml_item('StandardIcon','Destroy'), :border=>0), opportunity, :confirm => 'Are you sure?', :method => :delete %></td>
 	  </tr>
-	<% mycount += 1 %>
 	<% end %>
 	</table>
 

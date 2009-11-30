@@ -21,16 +21,11 @@
 		<th>&nbsp;</th>
 		<th>&nbsp;</th>
 	</tr>
-	<% mycount = 1 %>
 	<% for opp_item in @opportunity.opportunity_items %>
-	<% if mycount % 2 == 0 %>
-		<tr bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">
-	<% else %>
-		<tr>
-	<% end %>
-		<td align="center"><%= Floor.find(opp_item.from_floor_id).building_short_name_with_floor %></td>
+		<tr bgcolor="<%=cycle "#FFFFFF", get_yaml_item('StandardColour','TableRow') %>">
+		<td align="center"><%= opp_item.from_floor.building_short_name_with_floor %></td>
 		<td align="center"><%= opp_item.from_floor_seats%></td>
-		<td align="center"><%= Floor.find(opp_item.from_floor_id).building_short_name_with_floor %></td>
+		<td align="center"><%= opp_item.to_floor.building_short_name_with_floor %></td>
 		<td align="center"><%= opp_item.to_floor_seats%></td>
 		<td>[<%= opp_item.cost_centre -%>]: <%= opp_item.team_name %></td>
 		<td><%= opp_item.contact_name %></td>
@@ -38,10 +33,9 @@
 		<td><%= link_to image_tag(get_yaml_item('StandardIcon','Edit'), :border=>0), edit_opportunity_item_path(opp_item) %></td>
     <td><%= link_to image_tag(get_yaml_item('StandardIcon','Destroy'), :border=>0), opp_item, :confirm => 'Are you sure?', :method => :delete %></td>
 	</tr>
-	<% mycount += 1 %>
 	<% end %>
 </table>
-<p><%= link_to "New Opportunity Item", new_opportunity_item_path %></p>
+<p><%= link_to "New Opportunity Item", new_opportunity_item_path(:opportunity_id => @opportunity.id) %></p>
 <p>
   <b>Notes:</b>
   <%=h @opportunity.notes %>

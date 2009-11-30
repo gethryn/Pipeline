@@ -35,7 +35,11 @@ class ApplicationController < ActionController::Base
   private
   
   def set_user_time_zone
-    Time.zone = current_user.time_zone ||= "Sydney"
+    if current_user.nil?
+      Time.zone = "Sydney"
+    else
+      Time.zone = current_user.time_zone ||= "Sydney"
+    end
   end
   
 end

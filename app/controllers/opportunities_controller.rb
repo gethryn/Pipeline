@@ -18,7 +18,6 @@ class OpportunitiesController < ApplicationController
   # GET /opportunities/1.xml
   def show
     #@opportunity = Opportunity.find(params[:id])
-    @floors = Floor.find(:all, :include => :building, :order => "buildings.name, floors.floor_Level")
     
     respond_to do |format|
       format.html # show.html.erb

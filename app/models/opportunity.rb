@@ -16,4 +16,17 @@ class Opportunity < ActiveRecord::Base
     "\##{self.id}: #{self.team} [#{self.business_unit}]"
   end
   
+  def affected_floors
+    (opportunity_items.collect(&:from_floor) + opportunity_items.collect(&:to_floor)).uniq || []
+  end
+  
+  def affected_seats_from
+    opportunity_items.collect(&:from_floor_seats).sum || 0
+  end
+  
+  def affected_seats_to
+    opportunity_items.collect(&:to_floor_seats).sum || 0
+  end 
+  
+  
 end
