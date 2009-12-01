@@ -31,6 +31,7 @@ class OpportunitiesController < ApplicationController
     #@opportunity = Opportunity.new
     @floors = Floor.find(:all, :include => :building, :order => "buildings.name, floors.floor_Level")
     @account_managers = User.with_role(:account_manager)
+    @opportunity.est_date = Date.today
 
     respond_to do |format|
       format.html # new.html.erb

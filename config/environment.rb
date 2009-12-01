@@ -6,7 +6,7 @@ RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
-raw_config = File.read(RAILS_ROOT + '/db/static_items.yml')
+raw_config = File.read(RAILS_ROOT + '/config/static_items.yml')
 APP_CONFIG = YAML.load(raw_config)
 
 Rails::Initializer.run do |config|

@@ -8,6 +8,8 @@ class Opportunity < ActiveRecord::Base
   
   named_scope :in_status, lambda { |status| {:conditions => "status = '#{status}'"} }
   named_scope :for_business_unit, lambda { |bu| {:conditions => "business_unit = '#{bu}'"} }
+  named_scope :active, :conditions => ["status <> 'Cancelled'"]
+  named_scope :inactive, :conditions => ["status = 'Cancelled'"]
   
   def size_change?
     if ((self.num_seats_arriving.nil? == false) && (self.num_seats_departing != self.num_seats_arriving))
