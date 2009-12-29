@@ -1,5 +1,5 @@
 class Building < ActiveRecord::Base
-  
+  acts_as_mappable
   has_many :floors
   #has_many :opportunities, :through => :floors
   

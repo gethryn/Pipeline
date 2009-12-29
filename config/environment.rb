@@ -26,6 +26,7 @@ Rails::Initializer.run do |config|
   config.gem 'will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
   config.gem 'authlogic'
   config.gem 'declarative_authorization', :source => "http://gemcutter.org"
+  config.gem 'geokit'
 
 
   # Only load the plugins named here, in the order given (default is alphabetical).
