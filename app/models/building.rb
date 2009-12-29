@@ -29,5 +29,9 @@ class Building < ActiveRecord::Base
   def capacity
     self.floors.collect(&:capacity).sum
   end
+  
+  def full_address
+    "#{self.name}, #{self.suburb} #{self.state}, Australia"
+  end
 
 end
