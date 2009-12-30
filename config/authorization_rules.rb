@@ -2,7 +2,9 @@ authorization do
   role :admin do
     has_permission_on [:buildings, :floors, :opportunities, :static_items, :opportunity_items], 
                       :to => [  :index, :show, :new, :create, :edit, 
-                                :update, :destroy, :building_capacity_column_data] 
+                                :update, :destroy, :building_capacity_column_data]
+    has_permission_on [:users], :to => [  :index, :show, :new, :create, :edit, 
+                      :update, :destroy]
   end
   
   role :guest do
