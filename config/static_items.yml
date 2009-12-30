@@ -19,6 +19,7 @@ OpportunityStatus:
     Planning: /images/calendar.png
     Agreed: /images/thumb_up.png
     Delivered: /images/tick.png
+    Cancelled: /images/cancel.png
 BuildingZone:
     CBD: "#3399FF"
     Metro: "#66CC00"

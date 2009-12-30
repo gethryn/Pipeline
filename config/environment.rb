@@ -6,7 +6,7 @@ RAILS_GEM_VERSION = '2.3.4' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
-raw_config = File.read(RAILS_ROOT + '/db/static_items.yml')
+raw_config = File.read(RAILS_ROOT + '/config/static_items.yml')
 APP_CONFIG = YAML.load(raw_config)
 
 Rails::Initializer.run do |config|
@@ -26,10 +26,8 @@ Rails::Initializer.run do |config|
   config.gem 'will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
   config.gem 'authlogic'
   config.gem 'declarative_authorization', :source => "http://gemcutter.org"
-  config.gem 'rspec', :lib => false, :version => ">=1.2.2"
-  config.gem 'rspec-rails', :lib => false, :version => ">=1.2.2"
-  config.gem 'webrat', :lib => false, :version => ">=0.4.3"
-  config.gem 'cucumber', :lib => false, :version => ">=0.2.2"
+  config.gem 'geokit'
+
 
 
   # Only load the plugins named here, in the order given (default is alphabetical).

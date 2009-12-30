@@ -17,13 +17,8 @@
 		<th>&nbsp;</th>
 		<th>&nbsp;</th>
   </tr>
-	<% mycount = 0 %>
 	<% @buildings.sort_by {|bdg| [bdg[:building_zone], -bdg.capacity]}.each do |building| %>
-	<% if mycount % 2 == 0 %>
-	  <tr>
-	<% else %>
-		<tr bgcolor="<%=h get_yaml_item('StandardColour','TableRow') %>">
-	<% end %>
+		<tr bgcolor="<%= cycle "#FFFFFF", h(get_yaml_item('StandardColour','TableRow')) %>">
     <td align="center"><%=h building.short_name %></td>
     <td><%=h building.name %>&nbsp;<small>[<%= link_to 'map', building.google_map_link %>]</small></td>
     <td><%=h building.suburb %></td>
@@ -35,7 +30,7 @@
 				  <%= image_tag(get_yaml_item('StandardIcon','NoIcon')) %>
 				<% end %>
 		</td>
-		<td align="center"><%= link_to "#{building.opportunities.size}", building %></td>
+		<td align="center"><%= link_to "#{building.related_opportunities.count}", building %></td>
 		<td align="center"><%= link_to "#{building.floors_count}", building_floors_path(building) %></td>
 		<td align="center"><%= building.capacity %></td>
     <td><%= link_to image_tag(get_yaml_item('StandardIcon','Show'), :border=>0), building %></td>
@@ -54,7 +49,6 @@
 			<% end %>
 		</td>
   </tr>
-<% mycount += 1 %>
 <% end %>
 </table>
 

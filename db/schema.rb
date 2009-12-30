@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091127075102) do
+ActiveRecord::Schema.define(:version => 20091229112021) do
 
   create_table "building_occupancies", :force => true do |t|
     t.integer  "building_id"
@@ -24,11 +24,14 @@ ActiveRecord::Schema.define(:version => 20091127075102) do
     t.string   "short_name"
     t.string   "state"
     t.string   "suburb"
-    t.string   "building_zone",     :default => "CBD"
+    t.string   "building_zone",                   :default => "CBD"
     t.boolean  "available_for_sip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "floors_count",      :default => 0
+    t.integer  "floors_count",                    :default => 0
+    t.float    "lat",               :limit => 11
+    t.float    "lng",               :limit => 11
+    t.string   "postcode"
   end
 
   create_table "floors", :force => true do |t|
@@ -59,9 +62,11 @@ ActiveRecord::Schema.define(:version => 20091127075102) do
     t.datetime "updated_at"
     t.date     "est_date"
     t.integer  "floor_id_arriving"
+    t.integer  "user_id"
   end
 
   add_index "opportunities", ["floor_id"], :name => "index_opportunities_on_floor_id"
+  add_index "opportunities", ["user_id"], :name => "index_opportunities_on_user_id"
 
   create_table "opportunity_items", :force => true do |t|
     t.integer  "opportunity_id"

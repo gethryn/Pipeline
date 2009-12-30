@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   
 
   def new
-    @user = User.new
+    @user = User.new(:time_zone => "Sydney")
   end
   
   def create

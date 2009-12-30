@@ -1,4 +1,5 @@
 authorization do
+  
   role :admin do
     has_permission_on [:buildings, :floors, :opportunities, :static_items, :opportunity_items], 
                       :to => [  :index, :show, :new, :create, :edit, 
@@ -12,15 +13,24 @@ authorization do
     has_permission_on [:welcome], :to => [:index]
   end
   
-  role :author do
+  role :account_manager do
     has_permission_on [:buildings, :floors, :opportunities, :static_items, :opportunity_items], 
                       :to => [  :index, :show, :new, :create, :building_capacity_column_data]
   end
   
-  role :moderator do
-    includes :author
+  role :delivery_manager do
+    includes :account_manager
+  end
+  
+  role :vendor do
+    includes :guest
+  end
+  
+  role :workplace_manager do
+    includes :account_manager
     has_permission_on [:opportunities, :opportunity_items], 
                       :to => [:edit, :update]
   end
 
 end
+

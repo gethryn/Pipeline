@@ -5,14 +5,11 @@
 <% semantic_form_for @opportunity do |f| %>
 	<% f.inputs do %>
 		<%=f.input :move_type, :as => :select, :collection => get_yaml_keys('MoveType') %>
-		<%=f.input :floor, :label => "From Floor", :collection => @floors, :label_method => :building_short_name_with_floor %>
-		<%=f.input :num_seats_departing %>
-		<%=f.input :floor_id_arriving, :as => :select, :label => "To Floor", :collection => @floors, :label_method => :building_short_name_with_floor %>
-		<%=f.input :num_seats_arriving %>
 		<%=f.input :business_unit, :as => :select, :collection => get_yaml_keys('BusinessUnit') %>
-		<%=f.input :team, :label => "Team Name or Cost Centre \#"%>
-		<%=f.input :est_date, :label => "Estimated Date" %>
-		<%=f.input :notes, :label => "Opportunity Details" %>
+		<%=f.input :team, :label => "Short Description / Team"%>
+		<%=f.input :est_date, :label => "Estimated Date", :include_blank => false, :end_year => Date.today.year + 10 %>
+		<%=f.input :user, :label => "Property Contact" %>
+		<%=f.input :notes, :label => "Opportunity Details", :input_html => { :rows => 5 } %>
 		<%=f.input :status, :as => :select, :collection => get_yaml_keys('OpportunityStatus') %>
 		<%=f.input :key_move, :as => :radio, :hint => "Is this move critical to the NSW Restack Project?" %>
 		<%=f.input :applied, :as => :radio, :hint => "Select \'Yes\' once the item has been added to the Programme." %>
@@ -21,5 +18,5 @@
 <% end %>
 </p>
 <p><%= link_to 'Show', @opportunity %> the record as it is | go
-<%= link_to 'Back', building_path(@opportunity.floor.building) %> to the list</p>
+<%= link_to 'Back', opportunities_path %> to the list</p>
 
